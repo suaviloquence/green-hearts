@@ -8,7 +8,7 @@ extends DialogTree
 @export var third: DialogTree
 @export var third_text: String
 
-func _init(text: String, first: DialogTree, first_text: String, second: DialogTree, second_text: String, third: DialogTree, third_text: String, mutate_player) -> void:
+func _init(text: String, first: DialogTree, first_text: String, second: DialogTree, second_text: String, third: DialogTree, third_text: String, sprite: Texture = null, mutate_player = null) -> void:
 		self.text = text
 		self.first = first
 		self.first_text = first_text
@@ -17,6 +17,7 @@ func _init(text: String, first: DialogTree, first_text: String, second: DialogTr
 		self.third = third
 		self.third_text = third_text
 		self.mutate_player = mutate_player
+		self.sprite = sprite
 		
 	
 	

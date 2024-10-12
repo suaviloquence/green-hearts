@@ -2,7 +2,7 @@
 
 [ext_resource type="PackedScene" uid="uid://bq1hko0m1726r" path="res://story_box.tscn" id="1_ov6k3"]
 [ext_resource type="Script" path="res://story_box_choose_2.gd" id="2_tya7p"]
-[ext_resource type="Texture2D" uid="uid://c76xv3x37dedt" path="res://box.png" id="3_sn54m"]
+[ext_resource type="Texture2D" uid="uid://cwf8ifhagmt8c" path="res://button.png" id="3_3io28"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_nnu41"]
 size = Vector2(368, 32)
@@ -27,7 +27,7 @@ offset_left = -184.0
 offset_top = -16.0
 offset_right = 184.0
 offset_bottom = 33.0
-texture = ExtResource("3_sn54m")
+texture = ExtResource("3_3io28")
 expand_mode = 1
 
 [node name="MarginContainer" type="MarginContainer" parent="Options/Option1/TextureRect" index="0"]
@@ -37,10 +37,10 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
-theme_override_constants/margin_left = 8
-theme_override_constants/margin_top = 8
-theme_override_constants/margin_right = 8
-theme_override_constants/margin_bottom = 8
+theme_override_constants/margin_left = 16
+theme_override_constants/margin_top = 16
+theme_override_constants/margin_right = 16
+theme_override_constants/margin_bottom = 16
 
 [node name="Label" type="Label" parent="Options/Option1/TextureRect/MarginContainer" index="0"]
 layout_mode = 2
@@ -57,7 +57,7 @@ offset_left = -185.0
 offset_top = 4.0
 offset_right = 183.0
 offset_bottom = 53.0
-texture = ExtResource("3_sn54m")
+texture = ExtResource("3_3io28")
 expand_mode = 1
 
 [node name="MarginContainer" type="MarginContainer" parent="Options/Option2/TextureRect" index="0"]
@@ -67,10 +67,10 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
-theme_override_constants/margin_left = 8
-theme_override_constants/margin_top = 8
-theme_override_constants/margin_right = 8
-theme_override_constants/margin_bottom = 8
+theme_override_constants/margin_left = 16
+theme_override_constants/margin_top = 16
+theme_override_constants/margin_right = 16
+theme_override_constants/margin_bottom = 16
 
 [node name="Label" type="Label" parent="Options/Option2/TextureRect/MarginContainer" index="0"]
 layout_mode = 2

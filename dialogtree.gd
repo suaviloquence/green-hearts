@@ -2,6 +2,7 @@ class_name DialogTree
 extends Resource
 
 @export_multiline var text: String
+@export var sprite: Texture
 
 var mutate_player = null
 

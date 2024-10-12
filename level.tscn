@@ -7,3 +7,6 @@
 script = ExtResource("1_e6bfa")
 
 [node name="Player" parent="." instance=ExtResource("2_r2hhi")]
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+position = Vector2(384, 192)

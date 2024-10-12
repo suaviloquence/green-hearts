@@ -7,6 +7,9 @@ signal done
 
 @onready var player := $Player as Player
 
+
+var SCARY_GUY := preload("res://icon.svg")
+
 func _ready():
 	render_tree(tree)
 
@@ -14,6 +17,8 @@ func render_tree(dtree: DialogTree):
 	while dtree and dtree is not Terminus:
 		if dtree and dtree.mutate_player:
 			dtree.mutate_player.call(player)
+		if dtree.sprite:
+			$Sprite2D.texture = dtree.sprite
 		var data := 0
 		if dtree is DialogNode:
 			var node := preload("res://story_box_continue.tscn").instantiate()
