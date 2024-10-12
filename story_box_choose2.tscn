@@ -9,9 +9,9 @@ size = Vector2(368, 32)
 
 [node name="StoryBox" instance=ExtResource("1_ov6k3")]
 script = ExtResource("2_tya7p")
+first_text = ""
 
 [node name="Options" type="Node2D" parent="." index="1"]
-visible = false
 position = Vector2(192, 0)
 
 [node name="Option1" type="Area2D" parent="Options" index="0"]
@@ -27,6 +27,23 @@ offset_right = 184.0
 offset_bottom = 33.0
 texture = ExtResource("3_e7ofc")
 expand_mode = 1
+
+[node name="MarginContainer" type="MarginContainer" parent="Options/Option1/TextureRect" index="0"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/margin_left = 8
+theme_override_constants/margin_top = 8
+theme_override_constants/margin_right = 8
+theme_override_constants/margin_bottom = 8
+
+[node name="Label" type="Label" parent="Options/Option1/TextureRect/MarginContainer" index="0"]
+layout_mode = 2
+size_flags_vertical = 1
+text = "meow meow "
 
 [node name="Option2" type="Area2D" parent="Options" index="1"]
 

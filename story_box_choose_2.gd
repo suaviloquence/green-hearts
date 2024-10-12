@@ -2,6 +2,11 @@ extends StoryBox
 
 signal chose(item: int)
 
+@export var first_text: String
+
+func _ready():
+	$Options/Option1/TextureRect/MarginContainer/Label.text = first_text
+
 
 func _on_done() -> void:
 	($Area2D/TextureRect/MarginContainer as MarginContainer).add_theme_constant_override("margin_right", 384)
