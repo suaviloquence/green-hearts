@@ -11,9 +11,6 @@ signal done
 var speed_mult := 1.0
 
 func _ready():
-	start()
-
-func start():
 	var lines := text.split("\n")
 	label.text = ""
 	label.scroll_following = true
@@ -31,5 +28,5 @@ func start():
 
 
 func _on_area_2d_input_event(viewport: Node, event: InputEvent, shape_idx: int) -> void:
-	if event.is_action_pressed("fast_forward"):
+	if event.is_action_pressed("select"):
 		speed_mult *= 5
