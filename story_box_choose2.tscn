@@ -1,6 +1,6 @@
-[gd_scene load_steps=5 format=3 uid="uid://y6l5w432d0sk"]
+[gd_scene load_steps=5 format=3 uid="uid://kpyllmbp1an5"]
 
-[ext_resource type="PackedScene" path="res://story_box.tscn" id="1_ov6k3"]
+[ext_resource type="PackedScene" uid="uid://bq1hko0m1726r" path="res://story_box.tscn" id="1_ov6k3"]
 [ext_resource type="Script" path="res://story_box_choose_2.gd" id="2_tya7p"]
 [ext_resource type="Texture2D" uid="uid://dnat0xj3japj8" path="res://icon.svg" id="3_e7ofc"]
 
@@ -11,6 +11,7 @@ size = Vector2(368, 32)
 script = ExtResource("2_tya7p")
 
 [node name="Options" type="Node2D" parent="." index="1"]
+visible = false
 position = Vector2(192, 0)
 
 [node name="Option1" type="Area2D" parent="Options" index="0"]
@@ -41,3 +42,5 @@ texture = ExtResource("3_e7ofc")
 expand_mode = 1
 
 [connection signal="done" from="." to="." method="_on_done"]
+[connection signal="input_event" from="Options/Option1" to="." method="_on_option_1_input_event"]
+[connection signal="input_event" from="Options/Option2" to="." method="_on_option_2_input_event"]

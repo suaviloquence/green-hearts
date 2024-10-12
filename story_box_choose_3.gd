@@ -14,3 +14,7 @@ func _on_option_1_input_event(viewport: Node, event: InputEvent, shape_idx: int)
 func _on_option_2_input_event(viewport: Node, event: InputEvent, shape_idx: int) -> void:
 	if event.is_action_pressed("select"):
 		chose.emit(2)
+		
+func _on_option_3_input_event(viewport: Node, event: InputEvent, shape_idx: int) -> void:
+	if event.is_action_pressed("select"):
+		chose.emit(3)
