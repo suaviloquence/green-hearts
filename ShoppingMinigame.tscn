@@ -1,12 +1,17 @@
-[gd_scene load_steps=4 format=3 uid="uid://c5hr6qo0pxro1"]
+[gd_scene load_steps=6 format=3 uid="uid://c5hr6qo0pxro1"]
 
+[ext_resource type="Script" path="res://shopping_minigame.gd" id="1_37vvi"]
 [ext_resource type="Texture2D" uid="uid://c76xv3x37dedt" path="res://box.png" id="1_cldpa"]
 [ext_resource type="Texture2D" uid="uid://dnat0xj3japj8" path="res://icon.svg" id="2_ajno3"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_skkqj"]
 size = Vector2(64, 128)
 
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_hlfxx"]
+size = Vector2(64, 64)
+
 [node name="ShoppingMinigame" type="Node2D"]
+script = ExtResource("1_37vvi")
 
 [node name="VBoxContainer" type="VBoxContainer" parent="."]
 offset_right = 256.0
@@ -84,3 +89,165 @@ offset_right = 32.0
 offset_bottom = 64.0
 texture = ExtResource("2_ajno3")
 expand_mode = 1
+
+[node name="Linguine" type="Node2D" parent="."]
+visible = false
+
+[node name="Fresh" type="Area2D" parent="Linguine"]
+position = Vector2(368, 128)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Linguine/Fresh"]
+shape = SubResource("RectangleShape2D_hlfxx")
+
+[node name="Sprite2D" type="Sprite2D" parent="Linguine/Fresh"]
+scale = Vector2(0.5, 0.5)
+texture = ExtResource("2_ajno3")
+
+[node name="Evil" type="Area2D" parent="Linguine"]
+position = Vector2(464, 128)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Linguine/Evil"]
+shape = SubResource("RectangleShape2D_hlfxx")
+
+[node name="Sprite2D" type="Sprite2D" parent="Linguine/Evil"]
+scale = Vector2(0.5, 0.5)
+texture = ExtResource("2_ajno3")
+
+[node name="Shrimp" type="Node2D" parent="."]
+visible = false
+
+[node name="Farmed" type="Area2D" parent="Shrimp"]
+position = Vector2(368, 128)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Shrimp/Farmed"]
+shape = SubResource("RectangleShape2D_hlfxx")
+
+[node name="Sprite2D" type="Sprite2D" parent="Shrimp/Farmed"]
+scale = Vector2(0.5, 0.5)
+texture = ExtResource("2_ajno3")
+
+[node name="Mushroom" type="Area2D" parent="Shrimp"]
+position = Vector2(464, 128)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Shrimp/Mushroom"]
+shape = SubResource("RectangleShape2D_hlfxx")
+
+[node name="Sprite2D" type="Sprite2D" parent="Shrimp/Mushroom"]
+scale = Vector2(0.5, 0.5)
+texture = ExtResource("2_ajno3")
+
+[node name="Wild" type="Area2D" parent="Shrimp"]
+position = Vector2(560, 128)
+scale = Vector2(0.983281, 1)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Shrimp/Wild"]
+shape = SubResource("RectangleShape2D_hlfxx")
+
+[node name="Sprite2D" type="Sprite2D" parent="Shrimp/Wild"]
+scale = Vector2(0.5, 0.5)
+texture = ExtResource("2_ajno3")
+
+[node name="Onion" type="Node2D" parent="."]
+visible = false
+
+[node name="Bagged" type="Area2D" parent="Onion"]
+position = Vector2(368, 128)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Onion/Bagged"]
+shape = SubResource("RectangleShape2D_hlfxx")
+
+[node name="Sprite2D" type="Sprite2D" parent="Onion/Bagged"]
+scale = Vector2(0.5, 0.5)
+texture = ExtResource("2_ajno3")
+
+[node name="Loose" type="Area2D" parent="Onion"]
+position = Vector2(464, 128)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Onion/Loose"]
+shape = SubResource("RectangleShape2D_hlfxx")
+
+[node name="Sprite2D" type="Sprite2D" parent="Onion/Loose"]
+scale = Vector2(0.5, 0.5)
+texture = ExtResource("2_ajno3")
+
+[node name="FarmFresh" type="Area2D" parent="Onion"]
+position = Vector2(560, 128)
+scale = Vector2(0.983281, 1)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Onion/FarmFresh"]
+shape = SubResource("RectangleShape2D_hlfxx")
+
+[node name="Sprite2D" type="Sprite2D" parent="Onion/FarmFresh"]
+scale = Vector2(0.5, 0.5)
+texture = ExtResource("2_ajno3")
+
+[node name="Parsley" type="Node2D" parent="."]
+visible = false
+
+[node name="Bagged" type="Area2D" parent="Parsley"]
+position = Vector2(368, 128)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Parsley/Bagged"]
+shape = SubResource("RectangleShape2D_hlfxx")
+
+[node name="Sprite2D" type="Sprite2D" parent="Parsley/Bagged"]
+scale = Vector2(0.5, 0.5)
+texture = ExtResource("2_ajno3")
+
+[node name="Dried" type="Area2D" parent="Parsley"]
+position = Vector2(464, 128)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Parsley/Dried"]
+shape = SubResource("RectangleShape2D_hlfxx")
+
+[node name="Sprite2D" type="Sprite2D" parent="Parsley/Dried"]
+scale = Vector2(0.5, 0.5)
+texture = ExtResource("2_ajno3")
+
+[node name="Fresh" type="Area2D" parent="Parsley"]
+position = Vector2(560, 128)
+scale = Vector2(0.983281, 1)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Parsley/Fresh"]
+shape = SubResource("RectangleShape2D_hlfxx")
+
+[node name="Sprite2D" type="Sprite2D" parent="Parsley/Fresh"]
+scale = Vector2(0.5, 0.5)
+texture = ExtResource("2_ajno3")
+
+[node name="WhiteWine" type="Node2D" parent="."]
+visible = false
+
+[node name="Boxed" type="Area2D" parent="WhiteWine"]
+position = Vector2(368, 128)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="WhiteWine/Boxed"]
+shape = SubResource("RectangleShape2D_hlfxx")
+
+[node name="Sprite2D" type="Sprite2D" parent="WhiteWine/Boxed"]
+scale = Vector2(0.5, 0.5)
+texture = ExtResource("2_ajno3")
+
+[node name="Normal" type="Area2D" parent="WhiteWine"]
+position = Vector2(464, 128)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="WhiteWine/Normal"]
+shape = SubResource("RectangleShape2D_hlfxx")
+
+[node name="Sprite2D" type="Sprite2D" parent="WhiteWine/Normal"]
+scale = Vector2(0.5, 0.5)
+texture = ExtResource("2_ajno3")
+
+[node name="Local" type="Area2D" parent="WhiteWine"]
+position = Vector2(560, 128)
+scale = Vector2(0.983281, 1.00187)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="WhiteWine/Local"]
+shape = SubResource("RectangleShape2D_hlfxx")
+
+[node name="Sprite2D" type="Sprite2D" parent="WhiteWine/Local"]
+scale = Vector2(0.5, 0.5)
+texture = ExtResource("2_ajno3")
+
+[connection signal="input_event" from="Linguine/Fresh" to="." method="_on_fresh_input_event"]
+[connection signal="input_event" from="Linguine/Evil" to="." method="_on_evil_input_event"]
