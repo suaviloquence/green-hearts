@@ -18,5 +18,5 @@ var y_n_prompt_brief = DialogNode.new("Not yet sir, I just arrived a minute ago.
 
 
 func _ready():
-	tree = DialogNode.new("Agent $name, right on time! I assume you’ve been briefed on your mission?", y_n_prompt_brief, preload("res://icon.svg"))
+	tree = DialogNode.new("Agent $name, right on time! I assume you’ve been briefed on your mission?", hq_rhea_description, preload("res://icon.svg"))
 	super._ready()

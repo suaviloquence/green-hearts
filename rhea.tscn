@@ -1,0 +1,7 @@
+[gd_scene load_steps=3 format=3 uid="uid://b1c71v72yrfp3"]
+
+[ext_resource type="PackedScene" path="res://level.tscn" id="1_wxswv"]
+[ext_resource type="Script" path="res://rhea.gd" id="2_s04df"]
+
+[node name="Rhea" instance=ExtResource("1_wxswv")]
+script = ExtResource("2_s04df")

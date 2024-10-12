@@ -1,7 +1,10 @@
-[gd_scene load_steps=3 format=3 uid="uid://d2l161jocvrmb"]
+[gd_scene load_steps=4 format=3 uid="uid://d2l161jocvrmb"]
 
-[ext_resource type="PackedScene" uid="uid://d080f10bt85i1" path="res://level.tscn" id="1_uf0i1"]
+[ext_resource type="PackedScene" path="res://level.tscn" id="1_uf0i1"]
 [ext_resource type="Script" path="res://selection.gd" id="2_uxu0p"]
+[ext_resource type="PackedScene" uid="uid://dscvf0ncye6x5" path="res://Player.tscn" id="3_umewr"]
 
 [node name="Selection" instance=ExtResource("1_uf0i1")]
 script = ExtResource("2_uxu0p")
+
+[node name="Player" parent="." index="0" instance=ExtResource("3_umewr")]

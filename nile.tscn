@@ -1,0 +1,7 @@
+[gd_scene load_steps=3 format=3 uid="uid://dlhwb4r2kyi5l"]
+
+[ext_resource type="PackedScene" path="res://level.tscn" id="1_vbme0"]
+[ext_resource type="Script" path="res://nile.gd" id="2_ttiip"]
+
+[node name="Nile" instance=ExtResource("1_vbme0")]
+script = ExtResource("2_ttiip")

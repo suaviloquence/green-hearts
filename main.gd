@@ -18,3 +18,13 @@ func _ready() -> void:
 			agni.player = player
 			add_child(agni)
 			await agni.done
+		Player.Mission.Nile:
+			var nile := preload("res://nile.tscn").instantiate()
+			nile.player = player
+			add_child(nile)
+			await nile.done
+		Player.Mission.Rhea:
+			var rhea := preload("res://rhea.tscn").instantiate()
+			rhea.player = player
+			add_child(rhea)
+			await rhea.done
