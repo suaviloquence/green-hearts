@@ -1,7 +1,7 @@
 [gd_scene load_steps=4 format=3 uid="uid://bq1hko0m1726r"]
 
 [ext_resource type="Script" path="res://story_box.gd" id="1_yokcb"]
-[ext_resource type="Texture2D" uid="uid://dnat0xj3japj8" path="res://icon.svg" id="2_f168b"]
+[ext_resource type="Texture2D" uid="uid://c76xv3x37dedt" path="res://box.png" id="2_ewnib"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_4wlgr"]
 size = Vector2(768, 128)
@@ -17,7 +17,8 @@ offset_top = -64.0
 offset_right = 384.0
 offset_bottom = 64.0
 mouse_filter = 2
-texture = ExtResource("2_f168b")
+texture = ExtResource("2_ewnib")
+expand_mode = 1
 
 [node name="MarginContainer" type="MarginContainer" parent="Area2D/TextureRect"]
 layout_mode = 1

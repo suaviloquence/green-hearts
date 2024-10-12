@@ -6,8 +6,9 @@ signal chose(item: int)
 @export var second_text: String
 
 func _ready():
-	$Options/Option1/TextureRect/MarginContainer/Label.text = first_text
-	$Options/Option2/TextureRect/MarginContainer/Label.text = second_text
+	$Area2D/Options/Option1/TextureRect/MarginContainer/Label.text = first_text
+	$Area2D/Options/Option2/TextureRect/MarginContainer/Label.text = second_text
+	super._ready()
 
 
 func _on_done() -> void:

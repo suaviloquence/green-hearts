@@ -7,9 +7,10 @@ signal chose(item: int)
 @export var third_text: String
 
 func _ready():
-	$Options/Option1/TextureRect/MarginContainer/Label.text = first_text
-	$Options/Option2/TextureRect/MarginContainer/Label.text = second_text
+	$Area2D/Options/Option1/TextureRect/MarginContainer/Label.text = first_text
+	$Area2D/Options/Option2/TextureRect/MarginContainer/Label.text = second_text
 	$Area2D/Options/Option3/TextureRect/MarginContainer/Label.text = third_text
+	super._ready()
 
 func _on_done() -> void:
 	($Area2D/TextureRect/MarginContainer as MarginContainer).add_theme_constant_override("margin_right", 384)

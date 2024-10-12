@@ -2,7 +2,7 @@
 
 [ext_resource type="PackedScene" uid="uid://bq1hko0m1726r" path="res://story_box.tscn" id="1_01fff"]
 [ext_resource type="Script" path="res://story_box_continue.gd" id="2_tbdid"]
-[ext_resource type="Texture2D" uid="uid://dnat0xj3japj8" path="res://icon.svg" id="2_tsro5"]
+[ext_resource type="Texture2D" uid="uid://c76xv3x37dedt" path="res://box.png" id="3_f383m"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_n8fvx"]
 size = Vector2(64, 32)
@@ -22,7 +22,7 @@ offset_left = -32.0
 offset_top = -16.0
 offset_right = 32.0
 offset_bottom = 16.0
-texture = ExtResource("2_tsro5")
+texture = ExtResource("3_f383m")
 expand_mode = 1
 
 [connection signal="done" from="." to="." method="_on_done"]
