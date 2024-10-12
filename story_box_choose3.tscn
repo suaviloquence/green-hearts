@@ -1,6 +1,6 @@
-[gd_scene load_steps=5 format=3 uid="uid://6uogi85ky6wt"]
+[gd_scene load_steps=5 format=3 uid="uid://6gsi8bpg787c"]
 
-[ext_resource type="PackedScene" uid="uid://bq1hko0m1726r" path="res://story_box.tscn" id="1_185op"]
+[ext_resource type="PackedScene" path="res://story_box.tscn" id="1_185op"]
 [ext_resource type="Script" path="res://story_box_choose_3.gd" id="2_s3mcc"]
 [ext_resource type="Texture2D" uid="uid://dnat0xj3japj8" path="res://icon.svg" id="3_thpea"]
 
@@ -57,3 +57,5 @@ expand_mode = 1
 
 [connection signal="done" from="." to="." method="_on_done"]
 [connection signal="input_event" from="Area2D/Options/Option1" to="." method="_on_option_1_input_event"]
+[connection signal="input_event" from="Area2D/Options/Option2" to="." method="_on_option_2_input_event"]
+[connection signal="input_event" from="Area2D/Options/Option3" to="." method="_on_option_3_input_event"]
