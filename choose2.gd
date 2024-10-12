@@ -6,6 +6,14 @@ extends DialogTree
 @export var second: DialogTree
 @export var second_text: String
 
+func _init(text: String, first: DialogTree, first_text: String, second: DialogTree, second_text: String, mutate_player) -> void:
+		self.text = text
+		self.first = first
+		self.first_text = first_text
+		self.second = second
+		self.second_text = second_text
+		self.mutate_player = mutate_player
+
 func _next(data: int) -> DialogTree:
 	assert(data == 1 or data == 2)
 	if data == 1:
