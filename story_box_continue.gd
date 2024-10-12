@@ -2,10 +2,6 @@ extends StoryBox
 
 signal really_done
 
-func _ready() -> void:
-	super._ready()
-	$Area2D/Continue.hide()
-
 func _on_done() -> void:
 	$Area2D/Continue.show()
 
