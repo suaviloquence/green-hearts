@@ -1,5 +1,7 @@
 extends Node2D
 
+signal end(sustainability: int, taste: int)
+
 class Item:
 	var category: String
 	var name: String
@@ -91,60 +93,169 @@ var LOCAL_WINE := Item.new("White Wine", "Local Vineyard Wine",
 	}
 } 
 
+var order := ["Linguine", "Shrimp", "Onion", "Parsley", "White Wine"]
+
 var money := 35
-var cart := []
+var cart := {
+	"Linguine": null,
+	"Shrimp": null,
+	"Onion": null,
+	"Parsley": null,
+	"White Wine": null,
+}
+
+var aisle := "Linguine"
+
+var selected: Item = null
+var time := 45.
+
+
+func _ready():
+	$VBoxContainer/HBoxContainer/Time.text = "%d secs" % [ceili(time)];
+	redraw()
+
+func stop():
+	var taste := 0
+	var sus := 0
+	for thang in cart:
+		var item: Item = cart[thang]
+		if not item:
+			taste -= 5
+		else:
+			taste += item.taste
+			sus += item.sustainability
+	end.emit(sus, taste)
+	self.queue_free()
+
+func _process(delta: float) -> void:
+	time -= delta
+	if time <= 0:
+		stop()
+	elif ceili(time + delta) != ceili(time):
+		$VBoxContainer/HBoxContainer/Time.text = "%d secs" % [ceili(time)];
+
+func redraw():
+	$VBoxContainer/HBoxContainer/Money.text = "$%d" % [money] 
+	
+	if cart.values().all(func(x): return x != null):
+		$Finish.show()
+	else:
+		$Finish.hide()
+	
+	for k in order:
+		if k == aisle:
+			aisles[k]["node"].show()
+		else:
+			aisles[k]["node"].hide()
+		
+		var labels := $VBoxContainer/TextureRect/MarginContainer/VBoxContainer
+		var label := labels.get_node(k) as RichTextLabel
+				
+		if cart[k]:
+			var item: Item = cart[k]
+			label.text = "[s]%s: $%d[/s]" % [item.name, item.price]
+		else:
+			label.text = k
+	
+	var info := $Info
+	
+	if selected:
+		info.show()
+		$Info/MarginContainer/RichTextLabel.text = "[b]%s[/b]\n%s\n\nPrice: $%d" % [selected.name, selected.desc, selected.price]
+	else:
+		info.hide()
+			
+
+
+func try_select(item: Item):
+	if selected == item :
+		if cart[item.category] == item:
+			cart[item.category] = null
+			money += item.price
+			selected = null
+		elif not cart[item.category] and money >= item.price:
+			money -= item.price
+			cart[item.category] = item
+			selected = null
+	else:
+		selected = item
+		
+	redraw()
+
 
 
 func _on_fresh_input_event(viewport: Node, event: InputEvent, shape_idx: int) -> void:
-	pass # Replace with function body.
-
+	if event.is_action_pressed("select"):
+		try_select(FRESH_LINGUINE)
 
 func _on_evil_input_event(viewport: Node, event: InputEvent, shape_idx: int) -> void:
-	pass # Replace with function body.
-
+	if event.is_action_pressed("select"):
+		try_select(EVIL_LINGUINE)
 
 func _on_farmed_input_event(viewport: Node, event: InputEvent, shape_idx: int) -> void:
-	pass # Replace with function body.
+	if event.is_action_pressed("select"):
+		try_select(FARMED_SHRIMP)
 
 
 func _on_mushroom_input_event(viewport: Node, event: InputEvent, shape_idx: int) -> void:
-	pass # Replace with function body.
+	if event.is_action_pressed("select"):
+		try_select(MUSHROOMS)
 
 
 func _on_wild_input_event(viewport: Node, event: InputEvent, shape_idx: int) -> void:
-	pass # Replace with function body.
-
+	if event.is_action_pressed("select"):
+		try_select(WILD_PRAWNS)
 
 func _on_bagged_onion_input_event(viewport: Node, event: InputEvent, shape_idx: int) -> void:
-	pass # Replace with function body.
-
+	if event.is_action_pressed("select"):
+		try_select(BAGGED_ONION)
 
 func _on_loose_input_event(viewport: Node, event: InputEvent, shape_idx: int) -> void:
-	pass # Replace with function body.
-
+	if event.is_action_pressed("select"):
+		try_select(LOOSE_ONION)
 
 func _on_farm_fresh_input_event(viewport: Node, event: InputEvent, shape_idx: int) -> void:
-	pass # Replace with function body.
-
+	if event.is_action_pressed("select"):
+		try_select(FARMERS_MARKET_ONION)
 
 func _on_bagged_parsley_input_event(viewport: Node, event: InputEvent, shape_idx: int) -> void:
-	pass # Replace with function body.
-
+	if event.is_action_pressed("select"):
+		try_select(BAGGED_PARSLEY)
 
 func _on_dried_input_event(viewport: Node, event: InputEvent, shape_idx: int) -> void:
-	pass # Replace with function body.
-
+	if event.is_action_pressed("select"):
+		try_select(DRIED_PARSLEY)
+		
 func _on_boxed_input_event(viewport: Node, event: InputEvent, shape_idx: int) -> void:
-	pass # Replace with function body.
-
+	if event.is_action_pressed("select"):
+		try_select(BOXED_WINE)
 
 func _on_normal_input_event(viewport: Node, event: InputEvent, shape_idx: int) -> void:
-	pass # Replace with function body.
-
+	if event.is_action_pressed("select"):
+		try_select(NORMAL_WINE)
 
 func _on_local_input_event(viewport: Node, event: InputEvent, shape_idx: int) -> void:
-	pass # Replace with function body.
-
+	if event.is_action_pressed("select"):
+		try_select(LOCAL_WINE)
 
 func _on_fresh_parsley_input_event(viewport: Node, event: InputEvent, shape_idx: int) -> void:
-	pass # Replace with function body.
+	if event.is_action_pressed("select"):
+		try_select(FRESH_PARSLEY)
+
+func _on_left_input_event(viewport: Node, event: InputEvent, shape_idx: int) -> void:
+	if event.is_action_pressed("select"):
+		var idx := order.find(aisle)
+		aisle = order[(idx - 1 + len(order)) % len(order)]
+		selected = null
+		redraw()
+
+func _on_right_input_event(viewport: Node, event: InputEvent, shape_idx: int) -> void:
+	if event.is_action_pressed("select"):
+		var idx := order.find(aisle)
+		aisle = order[(idx + 1) % len(order)]
+		selected = null
+		redraw()
+
+func _on_cancel_pressed() -> void:
+	selected = null
+	redraw()

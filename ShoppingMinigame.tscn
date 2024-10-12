@@ -1,8 +1,9 @@
-[gd_scene load_steps=6 format=3 uid="uid://c5hr6qo0pxro1"]
+[gd_scene load_steps=7 format=3 uid="uid://c5hr6qo0pxro1"]
 
 [ext_resource type="Script" path="res://shopping_minigame.gd" id="1_37vvi"]
 [ext_resource type="Texture2D" uid="uid://c76xv3x37dedt" path="res://box.png" id="1_cldpa"]
 [ext_resource type="Texture2D" uid="uid://dnat0xj3japj8" path="res://icon.svg" id="2_ajno3"]
+[ext_resource type="Texture2D" uid="uid://cwf8ifhagmt8c" path="res://button.png" id="4_0ic51"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_skkqj"]
 size = Vector2(64, 128)
@@ -34,33 +35,52 @@ size_flags_vertical = 3
 texture = ExtResource("1_cldpa")
 expand_mode = 1
 
-[node name="VBoxContainer" type="VBoxContainer" parent="VBoxContainer/TextureRect"]
+[node name="MarginContainer" type="MarginContainer" parent="VBoxContainer/TextureRect"]
 layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
+theme_override_constants/margin_left = 32
+theme_override_constants/margin_top = 32
+theme_override_constants/margin_right = 32
+theme_override_constants/margin_bottom = 32
 
-[node name="Linguine" type="Label" parent="VBoxContainer/TextureRect/VBoxContainer"]
+[node name="VBoxContainer" type="VBoxContainer" parent="VBoxContainer/TextureRect/MarginContainer"]
 layout_mode = 2
-text = "Linguine"
+alignment = 1
 
-[node name="Shrimp" type="Label" parent="VBoxContainer/TextureRect/VBoxContainer"]
+[node name="Linguine" type="RichTextLabel" parent="VBoxContainer/TextureRect/MarginContainer/VBoxContainer"]
 layout_mode = 2
+bbcode_enabled = true
+text = "meow meow meow meow meow "
+fit_content = true
+
+[node name="Shrimp" type="RichTextLabel" parent="VBoxContainer/TextureRect/MarginContainer/VBoxContainer"]
+layout_mode = 2
+bbcode_enabled = true
 text = "Shrimp"
+fit_content = true
 
-[node name="Onion" type="Label" parent="VBoxContainer/TextureRect/VBoxContainer"]
+[node name="Onion" type="RichTextLabel" parent="VBoxContainer/TextureRect/MarginContainer/VBoxContainer"]
 layout_mode = 2
+bbcode_enabled = true
 text = "Onion"
+fit_content = true
 
-[node name="WhiteWine" type="Label" parent="VBoxContainer/TextureRect/VBoxContainer"]
+[node name="Parsley" type="RichTextLabel" parent="VBoxContainer/TextureRect/MarginContainer/VBoxContainer"]
 layout_mode = 2
-text = "White Wine"
-
-[node name="Parsley" type="Label" parent="VBoxContainer/TextureRect/VBoxContainer"]
-layout_mode = 2
+bbcode_enabled = true
 text = "Parsley"
+fit_content = true
+scroll_active = false
+
+[node name="White Wine" type="RichTextLabel" parent="VBoxContainer/TextureRect/MarginContainer/VBoxContainer"]
+layout_mode = 2
+bbcode_enabled = true
+text = "White Wine"
+fit_content = true
 
 [node name="Left" type="Area2D" parent="."]
 position = Vector2(288, 255)
@@ -91,7 +111,8 @@ texture = ExtResource("2_ajno3")
 expand_mode = 1
 
 [node name="Linguine" type="Node2D" parent="."]
-visible = false
+position = Vector2(0, -32)
+scale = Vector2(1.00081, 1)
 
 [node name="Fresh" type="Area2D" parent="Linguine"]
 position = Vector2(368, 128)
@@ -115,6 +136,7 @@ texture = ExtResource("2_ajno3")
 
 [node name="Shrimp" type="Node2D" parent="."]
 visible = false
+position = Vector2(0, -32)
 
 [node name="Farmed" type="Area2D" parent="Shrimp"]
 position = Vector2(368, 128)
@@ -149,6 +171,7 @@ texture = ExtResource("2_ajno3")
 
 [node name="Onion" type="Node2D" parent="."]
 visible = false
+position = Vector2(0, -32)
 
 [node name="Bagged" type="Area2D" parent="Onion"]
 position = Vector2(368, 128)
@@ -183,6 +206,7 @@ texture = ExtResource("2_ajno3")
 
 [node name="Parsley" type="Node2D" parent="."]
 visible = false
+position = Vector2(0, -32)
 
 [node name="Bagged" type="Area2D" parent="Parsley"]
 position = Vector2(368, 128)
@@ -217,6 +241,7 @@ texture = ExtResource("2_ajno3")
 
 [node name="WhiteWine" type="Node2D" parent="."]
 visible = false
+position = Vector2(0, -32)
 
 [node name="Boxed" type="Area2D" parent="WhiteWine"]
 position = Vector2(368, 128)
@@ -249,6 +274,84 @@ shape = SubResource("RectangleShape2D_hlfxx")
 scale = Vector2(0.5, 0.5)
 texture = ExtResource("2_ajno3")
 
+[node name="Info" type="TextureRect" parent="."]
+visible = false
+offset_left = 328.0
+offset_top = 128.0
+offset_right = 696.0
+offset_bottom = 448.0
+texture = ExtResource("4_0ic51")
+expand_mode = 1
+
+[node name="MarginContainer" type="MarginContainer" parent="Info"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+scale = Vector2(0.999051, 1)
+theme_override_constants/margin_left = 32
+theme_override_constants/margin_top = 32
+theme_override_constants/margin_right = 32
+theme_override_constants/margin_bottom = 32
+
+[node name="RichTextLabel" type="RichTextLabel" parent="Info/MarginContainer"]
+layout_mode = 2
+bbcode_enabled = true
+
+[node name="Cancel" type="TextureButton" parent="Info"]
+layout_mode = 1
+anchors_preset = 3
+anchor_left = 1.0
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -72.0
+offset_top = -72.0
+offset_right = -40.0
+offset_bottom = -40.0
+grow_horizontal = 0
+grow_vertical = 0
+scale = Vector2(1.22839, 1.2677)
+texture_normal = ExtResource("1_cldpa")
+ignore_texture_size = true
+stretch_mode = 0
+
+[node name="Label" type="Label" parent="Info/Cancel"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+text = "x"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Finish" type="TextureButton" parent="."]
+offset_left = 656.0
+offset_top = 448.0
+offset_right = 752.0
+offset_bottom = 512.0
+texture_normal = ExtResource("4_0ic51")
+ignore_texture_size = true
+stretch_mode = 0
+
+[node name="Label" type="Label" parent="Finish"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+scale = Vector2(0.999316, 1)
+text = "Finish"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[connection signal="input_event" from="Left" to="." method="_on_left_input_event"]
+[connection signal="input_event" from="Right" to="." method="_on_right_input_event"]
 [connection signal="input_event" from="Linguine/Fresh" to="." method="_on_fresh_input_event"]
 [connection signal="input_event" from="Linguine/Evil" to="." method="_on_evil_input_event"]
 [connection signal="input_event" from="Shrimp/Farmed" to="." method="_on_farmed_input_event"]
@@ -263,3 +366,5 @@ texture = ExtResource("2_ajno3")
 [connection signal="input_event" from="WhiteWine/Boxed" to="." method="_on_boxed_input_event"]
 [connection signal="input_event" from="WhiteWine/Normal" to="." method="_on_normal_input_event"]
 [connection signal="input_event" from="WhiteWine/Local" to="." method="_on_local_input_event"]
+[connection signal="pressed" from="Info/Cancel" to="." method="_on_cancel_pressed"]
+[connection signal="pressed" from="Finish" to="." method="stop"]
