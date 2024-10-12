@@ -5,32 +5,33 @@
 [ext_resource type="Texture2D" uid="uid://cwf8ifhagmt8c" path="res://button.png" id="3_3io28"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_nnu41"]
-size = Vector2(368, 32)
+size = Vector2(340, 40)
 
 [node name="StoryBox" instance=ExtResource("1_ov6k3")]
 script = ExtResource("2_tya7p")
 first_text = ""
 second_text = ""
 
-[node name="Options" type="Node2D" parent="." index="1"]
+[node name="Options" type="Node2D" parent="Area2D" index="2"]
 visible = false
 position = Vector2(192, 0)
 
-[node name="Option1" type="Area2D" parent="Options" index="0"]
-position = Vector2(0, -40)
+[node name="Option1" type="Area2D" parent="Area2D/Options" index="0"]
+position = Vector2(0, -32)
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Options/Option1" index="0"]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D/Options/Option1" index="0"]
 shape = SubResource("RectangleShape2D_nnu41")
 
-[node name="TextureRect" type="TextureRect" parent="Options/Option1" index="1"]
-offset_left = -184.0
-offset_top = -16.0
-offset_right = 184.0
-offset_bottom = 33.0
+[node name="TextureRect" type="TextureRect" parent="Area2D/Options/Option1" index="1"]
+offset_left = -170.0
+offset_top = -20.0
+offset_right = 170.0
+offset_bottom = 20.0
+scale = Vector2(1, 1.00149)
 texture = ExtResource("3_3io28")
 expand_mode = 1
 
-[node name="MarginContainer" type="MarginContainer" parent="Options/Option1/TextureRect" index="0"]
+[node name="MarginContainer" type="MarginContainer" parent="Area2D/Options/Option1/TextureRect" index="0"]
 layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
@@ -42,25 +43,26 @@ theme_override_constants/margin_top = 16
 theme_override_constants/margin_right = 16
 theme_override_constants/margin_bottom = 16
 
-[node name="Label" type="Label" parent="Options/Option1/TextureRect/MarginContainer" index="0"]
+[node name="Label" type="Label" parent="Area2D/Options/Option1/TextureRect/MarginContainer" index="0"]
 layout_mode = 2
 size_flags_vertical = 1
 text = "meow meow "
 
-[node name="Option2" type="Area2D" parent="Options" index="1"]
+[node name="Option2" type="Area2D" parent="Area2D/Options" index="1"]
+position = Vector2(0, 32)
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Options/Option2" index="0"]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D/Options/Option2" index="0"]
 shape = SubResource("RectangleShape2D_nnu41")
 
-[node name="TextureRect" type="TextureRect" parent="Options/Option2" index="1"]
-offset_left = -185.0
-offset_top = 4.0
-offset_right = 183.0
-offset_bottom = 53.0
+[node name="TextureRect" type="TextureRect" parent="Area2D/Options/Option2" index="1"]
+offset_left = -170.0
+offset_top = -20.0
+offset_right = 170.0
+offset_bottom = 20.0
 texture = ExtResource("3_3io28")
 expand_mode = 1
 
-[node name="MarginContainer" type="MarginContainer" parent="Options/Option2/TextureRect" index="0"]
+[node name="MarginContainer" type="MarginContainer" parent="Area2D/Options/Option2/TextureRect" index="0"]
 layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
@@ -72,10 +74,10 @@ theme_override_constants/margin_top = 16
 theme_override_constants/margin_right = 16
 theme_override_constants/margin_bottom = 16
 
-[node name="Label" type="Label" parent="Options/Option2/TextureRect/MarginContainer" index="0"]
+[node name="Label" type="Label" parent="Area2D/Options/Option2/TextureRect/MarginContainer" index="0"]
 layout_mode = 2
 text = "meowwwwwww"
 
 [connection signal="done" from="." to="." method="_on_done"]
-[connection signal="input_event" from="Options/Option1" to="." method="_on_option_1_input_event"]
-[connection signal="input_event" from="Options/Option2" to="." method="_on_option_2_input_event"]
+[connection signal="input_event" from="Area2D/Options/Option1" to="." method="_on_option_1_input_event"]
+[connection signal="input_event" from="Area2D/Options/Option2" to="." method="_on_option_2_input_event"]

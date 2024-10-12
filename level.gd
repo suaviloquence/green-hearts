@@ -5,8 +5,7 @@ signal done
 
 @export var tree: DialogTree
 
-@onready var player := $Player as Player
-
+var player: Player
 
 var SCARY_GUY := preload("res://icon.svg")
 
@@ -14,7 +13,7 @@ func _ready():
 	render_tree(tree)
 
 func render_tree(dtree: DialogTree):
-	while dtree and dtree is not Terminus:
+	while dtree:
 		if dtree and dtree.mutate_player:
 			dtree.mutate_player.call(player)
 		if dtree.sprite:
