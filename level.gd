@@ -16,6 +16,8 @@ func render_tree(dtree: DialogTree):
 	while dtree:
 		if dtree and dtree.mutate_player:
 			dtree.mutate_player.call(player)
+		$Hearts.size.x = 512 * player.hearts
+
 		if dtree.sprite:
 			$Sprite2D.texture = dtree.sprite
 		var data := 0

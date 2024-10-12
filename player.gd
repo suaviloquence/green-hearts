@@ -11,7 +11,7 @@ class_name Player
 @export var themself := "themself"
 # pronouns and anything else player needs to do
 
-@export var affection_meter: int = 0
+@export var hearts: int = 0
 @export var bad_decisions: Array = []
 
 enum Mission {
