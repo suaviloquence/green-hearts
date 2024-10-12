@@ -9,9 +9,11 @@ size = Vector2(368, 32)
 
 [node name="StoryBox" instance=ExtResource("1_185op")]
 script = ExtResource("2_s3mcc")
+first_text = ""
+second_text = ""
+third_text = ""
 
 [node name="Options" type="Node2D" parent="Area2D" index="2"]
-visible = false
 position = Vector2(192, 0)
 
 [node name="Option1" type="Area2D" parent="Area2D/Options" index="0"]
@@ -28,6 +30,22 @@ offset_bottom = 16.0
 texture = ExtResource("3_thpea")
 expand_mode = 1
 
+[node name="MarginContainer" type="MarginContainer" parent="Area2D/Options/Option1/TextureRect" index="0"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/margin_left = 8
+theme_override_constants/margin_top = 8
+theme_override_constants/margin_right = 8
+theme_override_constants/margin_bottom = 8
+
+[node name="Label" type="Label" parent="Area2D/Options/Option1/TextureRect/MarginContainer" index="0"]
+layout_mode = 2
+text = "meoww"
+
 [node name="Option2" type="Area2D" parent="Area2D/Options" index="1"]
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D/Options/Option2" index="0"]
@@ -40,6 +58,22 @@ offset_right = 184.0
 offset_bottom = 16.0
 texture = ExtResource("3_thpea")
 expand_mode = 1
+
+[node name="MarginContainer" type="MarginContainer" parent="Area2D/Options/Option2/TextureRect" index="0"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/margin_left = 8
+theme_override_constants/margin_top = 8
+theme_override_constants/margin_right = 8
+theme_override_constants/margin_bottom = 8
+
+[node name="Label" type="Label" parent="Area2D/Options/Option2/TextureRect/MarginContainer" index="0"]
+layout_mode = 2
+text = "meoww"
 
 [node name="Option3" type="Area2D" parent="Area2D/Options" index="2"]
 position = Vector2(0, 40)
@@ -54,6 +88,22 @@ offset_right = 184.0
 offset_bottom = 16.0
 texture = ExtResource("3_thpea")
 expand_mode = 1
+
+[node name="MarginContainer" type="MarginContainer" parent="Area2D/Options/Option3/TextureRect" index="0"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/margin_left = 8
+theme_override_constants/margin_top = 8
+theme_override_constants/margin_right = 8
+theme_override_constants/margin_bottom = 8
+
+[node name="Label" type="Label" parent="Area2D/Options/Option3/TextureRect/MarginContainer" index="0"]
+layout_mode = 2
+text = "meoww"
 
 [connection signal="done" from="." to="." method="_on_done"]
 [connection signal="input_event" from="Area2D/Options/Option1" to="." method="_on_option_1_input_event"]

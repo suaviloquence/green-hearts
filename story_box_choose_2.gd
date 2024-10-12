@@ -3,9 +3,11 @@ extends StoryBox
 signal chose(item: int)
 
 @export var first_text: String
+@export var second_text: String
 
 func _ready():
 	$Options/Option1/TextureRect/MarginContainer/Label.text = first_text
+	$Options/Option2/TextureRect/MarginContainer/Label.text = second_text
 
 
 func _on_done() -> void:
