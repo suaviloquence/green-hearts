@@ -1,0 +1,43 @@
+[gd_scene load_steps=5 format=3 uid="uid://y6l5w432d0sk"]
+
+[ext_resource type="PackedScene" path="res://story_box.tscn" id="1_ov6k3"]
+[ext_resource type="Script" path="res://story_box_choose_2.gd" id="2_tya7p"]
+[ext_resource type="Texture2D" uid="uid://dnat0xj3japj8" path="res://icon.svg" id="3_e7ofc"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_nnu41"]
+size = Vector2(368, 32)
+
+[node name="StoryBox" instance=ExtResource("1_ov6k3")]
+script = ExtResource("2_tya7p")
+
+[node name="Options" type="Node2D" parent="." index="1"]
+position = Vector2(192, 0)
+
+[node name="Option1" type="Area2D" parent="Options" index="0"]
+position = Vector2(0, -40)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Options/Option1" index="0"]
+shape = SubResource("RectangleShape2D_nnu41")
+
+[node name="TextureRect" type="TextureRect" parent="Options/Option1" index="1"]
+offset_left = -184.0
+offset_top = -16.0
+offset_right = 184.0
+offset_bottom = 33.0
+texture = ExtResource("3_e7ofc")
+expand_mode = 1
+
+[node name="Option2" type="Area2D" parent="Options" index="1"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Options/Option2" index="0"]
+shape = SubResource("RectangleShape2D_nnu41")
+
+[node name="TextureRect" type="TextureRect" parent="Options/Option2" index="1"]
+offset_left = -185.0
+offset_top = 4.0
+offset_right = 183.0
+offset_bottom = 53.0
+texture = ExtResource("3_e7ofc")
+expand_mode = 1
+
+[connection signal="done" from="." to="." method="_on_done"]
