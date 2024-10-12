@@ -1,8 +1,8 @@
 extends Level
 
 var hq_prompt_select = "Knowing that information, we need you to take one of these individuals and convince them to not go crazy. Who do you select?"
-var hq_rhea_description = DialogNode.new("... yes. As I was saying, Rhea is our 3rd individual. Even though she has made plenty of public appearances, I have reason to believe she might be the most difficult target to pursue. She appears very calm and collected on the outside, it’s the reason she was the last to be identified despite being a public figure. You just have to make sure not to push her too far. Like the hurricanes tied to her mood, things can head south FAST. With eyes on her at all time, she cares about she looks. More so than that, she cares about how she does it. Nothing angers her more than non-sustainable clothing practices.", Choose3.new(
-		hq_prompt_select, Terminus.new(
+var hq_rhea_description = DialogNode.new("... yes. As I was saying, Rhea is our 3rd individual. Even though she has made plenty of public appearances, I have reason to believe she might be the most difficult target to pursue. She appears very calm and collected on the outside, it’s the reason she was the last to be identified despite being a public figure. You just have to make sure not to push her too far. Like the hurricanes tied to her mood, things can head south FAST. With eyes on her at all time, she cares about she looks. More so than that, she cares about how she does it. Nothing angers her more than non-sustainable clothing practices.", 
+	Choose3.new(hq_prompt_select, Terminus.new(
 			func(player): player.mission = Player.Mission.Agni
 		), "Agni", Terminus.new(func(player): player.mission = Player.Mission.Nile), "Nile", Terminus.new(func(player): player.mission = Player.Mission.Rhea), "Rhea", null), null)
 var y_n_rhea_interupt = DialogNode.new("Wait, Rhea? Like, the political activist on the news Rhea?", hq_rhea_description, null)
