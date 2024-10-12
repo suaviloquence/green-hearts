@@ -1,0 +1,7 @@
+[gd_scene load_steps=3 format=3 uid="uid://baf1yau0uw0fi"]
+
+[ext_resource type="PackedScene" uid="uid://d080f10bt85i1" path="res://level.tscn" id="1_8veoa"]
+[ext_resource type="Script" path="res://agni.gd" id="2_rxsem"]
+
+[node name="Agni" instance=ExtResource("1_8veoa")]
+script = ExtResource("2_rxsem")
