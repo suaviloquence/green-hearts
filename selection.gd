@@ -2,7 +2,9 @@ extends Level
 
 var hq_prompt_select = "Knowing that information, we need you to take one of these individuals and convince them to not go crazy. Who do you select?"
 var hq_rhea_description = DialogNode.new("... yes. As I was saying, Rhea is our 3rd individual. Even though she has made plenty of public appearances, I have reason to believe she might be the most difficult target to pursue. She appears very calm and collected on the outside, it’s the reason she was the last to be identified despite being a public figure. You just have to make sure not to push her too far. Like the hurricanes tied to her mood, things can head south FAST. With eyes on her at all time, she cares about she looks. More so than that, she cares about how she does it. Nothing angers her more than non-sustainable clothing practices.", Choose3.new(
-		hq_prompt_select, Terminus.new(), "Agni", Terminus.new(), "Nile", Terminus.new(), "Rhea", null), null)
+		hq_prompt_select, Terminus.new(
+			func(player): player.mission = Player.Mission.Agni
+		), "Agni", Terminus.new(func(player): player.mission = Player.Mission.Nile), "Nile", Terminus.new(func(player): player.mission = Player.Mission.Rhea), "Rhea", null), null)
 var y_n_rhea_interupt = DialogNode.new("Wait, Rhea? Like, the political activist on the news Rhea?", hq_rhea_description, null)
 var hq_rhea_prompt = DialogNode.new("Our last file contains information on Rhea, she-", y_n_rhea_interupt, null)
 var hq_nile_description = DialogNode.new("The next file we have belongs to the 2nd figure we’ve identified, his name is Nile (show picture). As you could guess, his name comes from the very famous body of water. Funny, since his mood has a direct influence on the surrounding water. Our surveillance squad had a hard time keeping up with him, all our equipment was in constant danger of water damage whenever he got worked up. Particularly, he had a strong reaction when he saw unsustainable food sources being sold and prepared. Something about the cruelty on animals and the effect it has on the globe.", hq_rhea_prompt, null)
@@ -16,5 +18,5 @@ var y_n_prompt_brief = DialogNode.new("Not yet sir, I just arrived a minute ago.
 
 
 func _ready():
-	tree = DialogNode.new("Agent [Y/N], right on time! I assume you’ve been briefed on your mission?", y_n_prompt_brief, preload("res://icon.svg"))
+	tree = DialogNode.new("Agent $name, right on time! I assume you’ve been briefed on your mission?", y_n_prompt_brief, preload("res://icon.svg"))
 	super._ready()

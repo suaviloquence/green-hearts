@@ -13,3 +13,11 @@ class_name Player
 
 @export var affection_meter: int = 0
 @export var bad_decisions: Array = []
+
+enum Mission {
+	Agni,
+	Nile,
+	Rhea,
+}
+
+@export var mission: Mission
