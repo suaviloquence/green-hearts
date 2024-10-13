@@ -19,8 +19,7 @@ var ask_help_1 = DialogNode.new("Agni looks back at you in confusion.
 Agni: Um… why?", ask_help_2)
 var ask_help_start = DialogNode.new("$name: Hey Agni, help me pick these bottles up.", ask_help_1)
 
-var do_self_6 = DialogNode.new("Agni: Yeah, hm. You’re right.
-Score!!!", trail_end_1)
+var do_self_6 = DialogNode.new("Agni: Yeah, hm. You’re right.", trail_end_1, null, add_heart)
 var do_self_5 = DialogNode.new("$name: If I can, yeah! It’s better to help clean our environment then hope it goes away on its own, right?", do_self_6)
 var do_self_4 = DialogNode.new("Agni: So, do you often pick up trash on the side of trails?", do_self_5)
 var do_self_3 = DialogNode.new("You smile again at them in gratitude, and they smile back. After you hand some over, you both continue to walk.", do_self_4)
@@ -54,7 +53,7 @@ $name: Beautiful views, right?", comment_1)
 
 
 var approach_prompt = Choose2.new("How do you approach them?", comment, "Comment on the environment", offer, "Offer your water")
-var background_2 = DialogNode.new("Their short, fiery red hair catches the sunlight, a vivid contrast against the green landscape. There’s something magnetic about the way they stand—relaxed but alert, like they’re always on the edge of action. You recognize them instantly: Agni, your target.", approach_prompt)
+var background_2 = DialogNode.new("Their short, fiery red hair catches the sunlight, a vivid contrast against the green landscape. There’s something magnetic about the way they stand—relaxed but alert, like they’re always on the edge of action. You recognize them instantly: Agni, your target.", approach_prompt, AGNI)
 var background_1 = DialogNode.new("The trail ahead curves sharply, leading to an overlook where the treetops stretch out beneath the horizon. As you round the bend, you spot someone standing alone at the edge, gazing out at the view.", background_2)
 
 

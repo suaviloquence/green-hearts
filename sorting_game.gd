@@ -1,6 +1,6 @@
 extends Node2D
 
-signal end (bad: int)
+signal end (mistakes: int, time_left: int)
 
 @onready var kind_map := {
 	TrashThang.Kind.Trash: $Trash,
@@ -40,16 +40,14 @@ func _process(delta: float) -> void:
 		$TextureRect/Label.text = "%d secs" % [ceili(time)]
 
 		if not get_children().any(func(x): return x is TrashThang):
-			self.end.emit(bad)
-			print(bad)
+			self.end.emit(bad, ceili(time))
 			self.queue_free()
 	
 	if time <= 0:
 		for chd in get_children():
 			if chd is TrashThang:
 				bad += 1
-		end.emit(bad)
-		print(bad)
+		end.emit(bad, 0)
 		self.queue_free()
 	
 

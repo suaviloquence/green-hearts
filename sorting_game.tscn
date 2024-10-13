@@ -76,6 +76,7 @@ kind = 1
 texture = ExtResource("7_mws8c")
 
 [node name="TrashThang5" parent="." instance=ExtResource("3_fgf41")]
+kind = 1
 texture = ExtResource("8_m6yyk")
 
 [node name="TrashThang6" parent="." instance=ExtResource("3_fgf41")]
@@ -116,6 +117,7 @@ kind = 1
 texture = ExtResource("7_mws8c")
 
 [node name="TrashThang11" parent="." instance=ExtResource("3_fgf41")]
+kind = 1
 texture = ExtResource("8_m6yyk")
 
 [node name="TrashThang12" parent="." instance=ExtResource("3_fgf41")]
@@ -138,6 +140,7 @@ kind = 1
 texture = ExtResource("7_mws8c")
 
 [node name="TrashThang17" parent="." instance=ExtResource("3_fgf41")]
+kind = 1
 texture = ExtResource("8_m6yyk")
 
 [node name="TrashThang18" parent="." instance=ExtResource("3_fgf41")]
@@ -160,6 +163,7 @@ kind = 1
 texture = ExtResource("7_mws8c")
 
 [node name="TrashThang23" parent="." instance=ExtResource("3_fgf41")]
+kind = 1
 texture = ExtResource("8_m6yyk")
 
 [node name="TrashThang24" parent="." instance=ExtResource("3_fgf41")]

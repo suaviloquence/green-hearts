@@ -3,11 +3,10 @@
 [ext_resource type="Script" path="res://shopping_minigame.gd" id="1_37vvi"]
 [ext_resource type="Texture2D" uid="uid://c76xv3x37dedt" path="res://box.png" id="1_cldpa"]
 [ext_resource type="Texture2D" uid="uid://bhr2fa02112v6" path="res://GROCERY.png" id="2_f4lvi"]
-[ext_resource type="Texture2D" uid="uid://oqjgjqomqrtj" path="res://down.png" id="3_6sf34"]
 [ext_resource type="Texture2D" uid="uid://desxbtcggx6eb" path="res://paper.png" id="3_kwki4"]
-[ext_resource type="Texture2D" uid="uid://cwf8ifhagmt8c" path="res://button.png" id="4_0ic51"]
 [ext_resource type="Texture2D" uid="uid://t34ssocwril1" path="res://store/linguine nest.png" id="4_1af4t"]
 [ext_resource type="Texture2D" uid="uid://c0k1uvvwk5b0v" path="res://store/bag onion.png" id="4_tmyxy"]
+[ext_resource type="Texture2D" uid="uid://b7wa5ybbnxtp7" path="res://SIDE_ARROW.png" id="4_vgvr7"]
 [ext_resource type="Texture2D" uid="uid://txufc0p5uj27" path="res://store/box linguine.png" id="5_fudo4"]
 [ext_resource type="Texture2D" uid="uid://dyg1uflkhvxa1" path="res://store/loose onion.png" id="5_qqltr"]
 [ext_resource type="Texture2D" uid="uid://bdoc3gg5qlf2w" path="res://store/fancy onion.png" id="6_aj531"]
@@ -20,6 +19,7 @@
 [ext_resource type="Texture2D" uid="uid://cpt381tu1y1i5" path="res://store/bag parsley.png" id="12_j43a1"]
 [ext_resource type="Texture2D" uid="uid://u3bo5rmg3k10" path="res://store/dry parsley.png" id="13_k57aj"]
 [ext_resource type="Texture2D" uid="uid://csuwe0tumvlh8" path="res://store/bunch parsley.png" id="14_m17sp"]
+[ext_resource type="Texture2D" uid="uid://5fargpbp4eic" path="res://finish.png" id="19_tchgf"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_skkqj"]
 size = Vector2(64, 128)
@@ -121,14 +121,13 @@ position = Vector2(288, 255)
 shape = SubResource("RectangleShape2D_skkqj")
 
 [node name="TextureRect" type="TextureRect" parent="Left"]
-offset_left = 72.0
-offset_top = -64.0
-offset_right = 200.0
-offset_bottom = 64.0
-rotation = 1.5708
+offset_left = 32.0
+offset_top = 64.0
+offset_right = 96.0
+offset_bottom = 192.0
+rotation = 3.14159
 scale = Vector2(1.00267, 1.00855)
-texture = ExtResource("3_6sf34")
-expand_mode = 1
+texture = ExtResource("4_vgvr7")
 
 [node name="Right" type="Area2D" parent="."]
 position = Vector2(736, 255)
@@ -137,13 +136,11 @@ position = Vector2(736, 255)
 shape = SubResource("RectangleShape2D_skkqj")
 
 [node name="TextureRect2" type="TextureRect" parent="Right"]
-offset_left = 56.0
+offset_left = -32.0
 offset_top = -64.0
-offset_right = 184.0
+offset_right = 32.0
 offset_bottom = 64.0
-rotation = 1.5708
-scale = Vector2(1.01347, 1.00855)
-texture = ExtResource("3_6sf34")
+texture = ExtResource("4_vgvr7")
 expand_mode = 1
 flip_v = true
 
@@ -319,7 +316,7 @@ offset_left = 328.0
 offset_top = 128.0
 offset_right = 696.0
 offset_bottom = 448.0
-texture = ExtResource("4_0ic51")
+texture = ExtResource("19_tchgf")
 expand_mode = 1
 
 [node name="MarginContainer" type="MarginContainer" parent="Info"]
@@ -337,6 +334,7 @@ theme_override_constants/margin_bottom = 32
 
 [node name="RichTextLabel" type="RichTextLabel" parent="Info/MarginContainer"]
 layout_mode = 2
+theme_override_colors/default_color = Color(0, 0, 0, 1)
 bbcode_enabled = true
 
 [node name="Cancel" type="TextureButton" parent="Info"]
@@ -373,7 +371,7 @@ offset_left = 656.0
 offset_top = 448.0
 offset_right = 752.0
 offset_bottom = 512.0
-texture_normal = ExtResource("4_0ic51")
+texture_normal = ExtResource("19_tchgf")
 ignore_texture_size = true
 stretch_mode = 0
 
@@ -385,6 +383,7 @@ anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
 scale = Vector2(0.999316, 1)
+theme_override_colors/font_color = Color(0, 0, 0, 1)
 text = "Finish"
 horizontal_alignment = 1
 vertical_alignment = 1

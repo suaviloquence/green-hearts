@@ -7,7 +7,7 @@
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_nnu41"]
 size = Vector2(340, 40)
 
-[node name="StoryBox" instance=ExtResource("1_ov6k3")]
+[node name="StoryBox2" instance=ExtResource("1_ov6k3")]
 script = ExtResource("2_tya7p")
 first_text = ""
 second_text = ""

@@ -108,7 +108,7 @@ func _ready() -> void:
 						)
 					),
 					null,
-					func(_p): $TextureRect.texture = preload("res://TRASH_GRASS_PICNIC.png"),
+					func(_p): $TextureRect.texture = preload("res://PICNIC_GRASS.png"),
 				)
 			),
 			AGNI,

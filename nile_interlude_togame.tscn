@@ -1,7 +1,16 @@
-[gd_scene load_steps=3 format=3 uid="uid://dova0vc4qo55o"]
+[gd_scene load_steps=4 format=3 uid="uid://dova0vc4qo55o"]
 
 [ext_resource type="PackedScene" uid="uid://d080f10bt85i1" path="res://level.tscn" id="1_iwd2m"]
 [ext_resource type="Script" path="res://nile_interlude_togame.gd" id="2_66v26"]
+[ext_resource type="Texture2D" uid="uid://bhr2fa02112v6" path="res://GROCERY.png" id="3_v87si"]
 
 [node name="Nile Interlude to Game" instance=ExtResource("1_iwd2m")]
 script = ExtResource("2_66v26")
+
+[node name="TextureRect" type="TextureRect" parent="." index="0"]
+offset_top = -4.0
+offset_right = 768.0
+offset_bottom = 508.0
+texture = ExtResource("3_v87si")
+expand_mode = 1
+stretch_mode = 6
