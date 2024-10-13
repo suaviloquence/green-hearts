@@ -21,7 +21,7 @@ try_start, "Don't demand change now", ultimatum_start, "Set an ultimatum")
 var confession_4 = DialogNode.new("The sun is starting to set, painting the sky with watercolors of orange and pink. It’s the perfect time to confess.", confession_5)
 var confession_3 = DialogNode.new("Nile looks at you with a soft gaze. 
 Nile: I feel the same with you. It’s like everything around me disappears when I’m with you.", confession_4)
-var confession_2 = DialogNode.new("$name: I really enjoy my time with you Nile, I feel so calm and free.", confession_3)
+var confession_2 = DialogNode.new("$name: I really enjoy my time with you Nile, I feel so calm and free.", confession_3, NILE)
 var confession_1 = DialogNode.new("You and Nile are sitting close to each other on the beach, hands almost touching. After a fun day running around the beach together, the atmosphere got tense. It’s like Nile is also anticipating a serious conversation.", confession_2)
 var confession_intro = DialogNode.new("It has been a couple of dates since the cooking one. It’s enough for you to feel like it’s time to confess to Nile, 
 and see if he’s willing to be sustainable with you. You have invited him on a beach date, with a little romantic picnic! 
