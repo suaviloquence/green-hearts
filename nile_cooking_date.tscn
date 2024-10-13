@@ -1,0 +1,7 @@
+[gd_scene load_steps=3 format=3 uid="uid://cwabwj3cp0iyn"]
+
+[ext_resource type="PackedScene" path="res://level.tscn" id="1_8ss64"]
+[ext_resource type="Script" path="res://nile_cooking_date.gd" id="2_gqmf2"]
+
+[node name="Nile Cooking Date" instance=ExtResource("1_8ss64")]
+script = ExtResource("2_gqmf2")
