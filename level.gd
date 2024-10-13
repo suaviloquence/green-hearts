@@ -8,6 +8,9 @@ signal done
 var player: Player
 
 var SCARY_GUY := preload("res://icon.svg")
+var NILE := preload("res://NILE.png")
+var AGNI := preload("res://AGNI.png")
+var RESET := Texture.new()
 
 func explode(emoji, pos: Vector2 = Vector2(384, 128)):
 	var ee := preload("res://emoji_explosion.tscn").instantiate()

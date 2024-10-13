@@ -1,0 +1,23 @@
+[gd_scene load_steps=3 format=3 uid="uid://dlosdkxh0gulo"]
+
+[ext_resource type="Script" path="res://trash_thang.gd" id="1_v33g3"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_12vuj"]
+size = Vector2(64, 64)
+
+[node name="TrashThang" type="Area2D"]
+collision_layer = 2
+script = ExtResource("1_v33g3")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("RectangleShape2D_12vuj")
+
+[node name="TextureRect" type="TextureRect" parent="."]
+offset_left = -32.0
+offset_top = -32.0
+offset_right = 32.0
+offset_bottom = 32.0
+expand_mode = 5
+stretch_mode = 5
+
+[connection signal="input_event" from="." to="." method="_on_input_event"]

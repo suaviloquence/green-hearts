@@ -117,7 +117,7 @@ var bring_up23 = DialogNode.new(bring_up2, bring_up34)
 var bring_up12 = DialogNode.new(bring_up1, bring_up23)
 var bring_upstart = DialogNode.new(bring_up, bring_up12)
 
-var ask_habitsfinal = DialogNode.new(ask_habits9, mergedstart)
+var ask_habitsfinal = DialogNode.new(ask_habits9, mergedstart, null, add_heart)
 var ask_habits89 = DialogNode.new(ask_habits8, ask_habitsfinal)
 var ask_habits78 = DialogNode.new(ask_habits7, ask_habits89)
 var ask_habits67 = DialogNode.new(ask_habits6, ask_habits78)
