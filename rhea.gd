@@ -2,7 +2,8 @@ extends Level
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
-	self.tree = DialogNode.new("This is the tree for Rhea", null, null, null)
+	self.tree = DialogNode.new("Rhea can be a little hot-headed and difficult.
+Maybe try an easier character first.", null)
 	super._ready() # Replace with function body.
 
 

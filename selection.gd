@@ -1,11 +1,11 @@
 extends Level
 
 var hq_prompt_select = "Given this, which one do you think you could date and help control natural disasters?"
-var hq_rhea_description = DialogNode.new("... yes. As I was saying, Rhea is the third individual. Even though she has been in the limelight plenty of times, she may be the most difficult target to pursue. She appears very confident and collected on the outside.  She was even the last to be identified despite being such a public figure. You need to make sure not to push her too far. Like the hurricanes tied to her mood, things can head south FAST. With eyes on her at all times, she cares a great deal about how she looks. Appeal to her sense of style and show her how sustainable fashion can beat out fast fashion.
-", 
-	Choose3.new(hq_prompt_select, Terminus.new(
+var selection := Choose3.new(hq_prompt_select, Terminus.new(
 			func(player): player.mission = Player.Mission.Agni
-		), "Agni", Terminus.new(func(player): player.mission = Player.Mission.Nile), "Nile", Terminus.new(func(player): player.mission = Player.Mission.Rhea), "Rhea", RESET))
+		), "Agni", Terminus.new(func(player): player.mission = Player.Mission.Nile), "Nile", Terminus.new(func(player): player.mission = Player.Mission.Rhea), "Rhea", RESET)
+var hq_rhea_description = DialogNode.new("... yes. As I was saying, Rhea is the third individual. Even though she has been in the limelight plenty of times, she may be the most difficult target to pursue. She appears very confident and collected on the outside.  She was even the last to be identified despite being such a public figure. You need to make sure not to push her too far. Like the hurricanes tied to her mood, things can head south FAST. With eyes on her at all times, she cares a great deal about how she looks. Appeal to her sense of style and show her how sustainable fashion can beat out fast fashion.
+", selection)
 var y_n_rhea_interupt = DialogNode.new("Wait, that Rhea? Like, the famous activist Rhea Zephyr?", hq_rhea_description, null)
 var hq_rhea_prompt = DialogNode.new("Our last file contains information on Rhea, she-", y_n_rhea_interupt, RHEA)
 var hq_nile_description = DialogNode.new("This second file is for Nile.  We’ve identified a link between him and the catastrophic floods we’ve been having. Our surveillance squad had a hard time keeping up with him, as all our equipment was in constant danger of water damage whenever he got worked up. He also loves a good meal, so help show him how sustainable agriculture can make food even more delicious.", hq_rhea_prompt, NILE)
@@ -20,6 +20,6 @@ var y_n_prompt_brief = DialogNode.new("Not yet sir, I just got here. Could you g
 
 
 func _ready():
-	tree = DialogNode.new("Agent $name, right on time! I assume you’ve been briefed on your mission?", y_n_prompt_brief)
+	tree = Choose2.new("Agent $name, right on time! I assume you’ve been briefed on your mission?",  y_n_prompt_brief, "Not yet", selection, "Yes (skip intro)")
 	#tree = hq_rhea_description
 	super._ready()
