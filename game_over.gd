@@ -14,7 +14,6 @@ func _ready() -> void:
 
 func retry():
 	rst.emit()
-	self.queue_free()
 	
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
