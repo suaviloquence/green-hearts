@@ -33,9 +33,9 @@ var post_game_final = DialogNode.new("Finally, the shrimp scampi  on linguine is
 var post_game_5 = DialogNode.new("***You both get immersed in the cooking, but conversation never stops as you continue learning about each other’s lives. Of course, you don’t tell him about your mission***", post_game_final)
 var post_game_4 = DialogNode.new("Nile blushes as he steps inside, but then he looks up at you with glee. He’s excited to cook with you.", post_game_5)
 var post_game_3 = DialogNode.new("They’re a bundle of orchids, and perfect for your dining table!
-$name: They’re beautiful, thank you so much Nile! I have the kitchen prepped, shame you wore such a nice outfit for a cooking date.", post_game_4)
+$name: They’re beautiful, thank you so much Nile! I have the kitchen prepped, shame you wore such a nice outfit for a cooking date.", post_game_4, null, func(_p): explode("🪻"))
 var post_game_2 = DialogNode.new("Nile: Hi $name! I got you flowers, I hope you like them!", post_game_3)
-var post_game_1 = DialogNode.new("Nile is rocking on his heels a bit with his hands behind his back, looking all around your front porch.Once you open the door, he stumbles for a second before giving you a big, warm smile.", post_game_2)
+var post_game_1 = DialogNode.new("Nile is rocking on his heels a bit with his hands behind his back, looking all around your front porch.Once you open the door, he stumbles for a second before giving you a big, warm smile.", post_game_2, NILE)
 var post_game_start = DialogNode.new("Just as you finish setting up the kitchen, you hear a knock on the door. Brushing your hands and fixing your hair slightly, you look through the peephole.", post_game_1)
 
 #make sure to add if-elif-elif-else statement 

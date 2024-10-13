@@ -12,6 +12,8 @@ enum Kind {
 @export var kind: Kind
 @export var texture: Texture
 
+var try_lock: Callable
+
 func _ready() -> void:
 	$TextureRect.texture = texture
 
@@ -23,7 +25,9 @@ func _process(delta: float) -> void:
 
 func _on_input_event(viewport: Node, event: InputEvent, shape_idx: int) -> void:
 	if event.is_action_pressed("select"):
-		selected = true
+		if try_lock.call():
+			selected = true
 	elif event.is_action_released("select"):
-		selected = false
-		dropped.emit()
+		if selected:
+			selected = false
+			dropped.emit()

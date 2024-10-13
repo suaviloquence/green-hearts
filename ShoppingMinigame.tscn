@@ -162,6 +162,7 @@ position = Vector2(0, -32)
 position = Vector2(368, 128)
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Shrimp/Farmed"]
+scale = Vector2(-0.288994, -0.573183)
 shape = SubResource("RectangleShape2D_hlfxx")
 
 [node name="Sprite2D" type="Sprite2D" parent="Shrimp/Farmed"]
@@ -296,7 +297,6 @@ scale = Vector2(0.094, 0.0938396)
 texture = ExtResource("9_q4n1a")
 
 [node name="Info" type="TextureRect" parent="."]
-visible = false
 offset_left = 328.0
 offset_top = 128.0
 offset_right = 696.0

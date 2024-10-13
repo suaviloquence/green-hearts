@@ -7,7 +7,7 @@ var hq_rhea_description = DialogNode.new("... yes. As I was saying, Rhea is the 
 			func(player): player.mission = Player.Mission.Agni
 		), "Agni", Terminus.new(func(player): player.mission = Player.Mission.Nile), "Nile", Terminus.new(func(player): player.mission = Player.Mission.Rhea), "Rhea", RESET))
 var y_n_rhea_interupt = DialogNode.new("Wait, that Rhea? Like, the famous activist Rhea Zephyr?", hq_rhea_description, null)
-var hq_rhea_prompt = DialogNode.new("Our last file contains information on Rhea, she-", y_n_rhea_interupt, null)
+var hq_rhea_prompt = DialogNode.new("Our last file contains information on Rhea, she-", y_n_rhea_interupt, RHEA)
 var hq_nile_description = DialogNode.new("This second file is for Nile.  We’ve identified a link between him and the catastrophic floods we’ve been having. Our surveillance squad had a hard time keeping up with him, as all our equipment was in constant danger of water damage whenever he got worked up. He also loves a good meal, so help show him how sustainable agriculture can make food even more delicious.", hq_rhea_prompt, NILE)
 var hq_agni_description = DialogNode.new("The first one is Agni. Calling them a hothead is almost too on the nose: when their fiery temper erupts, unfortunately so do wildfires. Be careful of their volatile mood, but you can also get back on their good side if anything occurs. Live and forget, they say.", 
 DialogNode.new("According to our intel, they spend a lot of time on nature hikes.  Because of this, we’ve determined a perfect trail for you to make first contact on.  Try to help them stay calm and keep their environment clean by recycling.", hq_nile_description), AGNI)

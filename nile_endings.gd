@@ -23,3 +23,4 @@ func _ready() -> void:
 		self.tree = good_ending_start
 	else:
 		self.tree = bad_ending_start # Replace with function body.
+	super._ready()
