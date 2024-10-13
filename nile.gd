@@ -8,6 +8,11 @@ func _ready() -> void:
 	add_child(meet_cute)
 	await meet_cute.done
 	
+	var interlude := preload("res://nile_interlude_togame.tscn").instantiate()
+	interlude.player = player
+	add_child(interlude)
+	await interlude.done
+	
 	var minigame := preload("res://ShoppingMinigame.tscn").instantiate()
 	add_child(minigame)
 	var output = await minigame.end;
