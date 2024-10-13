@@ -2,7 +2,7 @@ class_name StoryBox
 extends Node2D
 
 @export_multiline var text: String
-@export var speed := 3.0
+@export var speed := 5.0
 
 @onready var label := $Area2D/TextureRect/MarginContainer/RichTextLabel as RichTextLabel
 

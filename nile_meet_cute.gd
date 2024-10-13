@@ -178,7 +178,13 @@ var poolstart = DialogNode.new(get_in_pool, pool12)
 
 var first_choice = Choose2.new(first_choice_prompt, poolstart, "Don't wait, get in the pool!", approach_start, "Wait for him to finish, then go for it!")
 var background12 = DialogNode.new(background2, first_choice)
-var backgroundstart = DialogNode.new(background1, background12, preload("res://NILE.png"))
+var backgroundstart = DialogNode.new(background1, background12, preload("res://NILE.png"),
+	func(_p):
+		var ee := preload("res://emoji_explosion.tscn").instantiate()
+		ee.emoji = ";)"
+		ee.position = Vector2(384, 512/2)
+		add_child(ee)
+)
 
 func _ready() -> void:
 	tree = backgroundstart
