@@ -16,6 +16,7 @@ func _process(delta: float) -> void:
 	var new_thangs := []
 	for thang in thangs:
 		var lbl: Label = thang[0]
+		lbl.add_theme_font_override("font", preload("res://emoji.ttf"))
 		var speed: Vector2 = thang[1]
 		lbl.position += speed
 		speed *= (1 + delta)
