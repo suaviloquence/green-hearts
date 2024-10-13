@@ -134,7 +134,7 @@ var do_nothing_node = DialogNode.new(do_nothing, mergedstart)
 var sustainable_choice = Choose3.new(merged_choice, ask_habitsstart, "Ask about his eating habits!", bring_upstart, "Bring up the topic of sustainability", do_nothing_node, "Do nothing, don't make it awkward")
 
 #before merge choices
-var stay_humblefinal = DialogNode.new(stay_humble6, sustainable_choice, null, func(player): player.hearts += 1)
+var stay_humblefinal = DialogNode.new(stay_humble6, sustainable_choice, null, add_heart)
 var stay_humble56 = DialogNode.new(stay_humble5, stay_humblefinal)
 var stay_humble45 = DialogNode.new(stay_humble4, stay_humble56)
 var stay_humble34 = DialogNode.new(stay_humble3, stay_humble45)
@@ -180,10 +180,7 @@ var first_choice = Choose2.new(first_choice_prompt, poolstart, "Don't wait, get 
 var background12 = DialogNode.new(background2, first_choice)
 var backgroundstart = DialogNode.new(background1, background12, preload("res://NILE.png"),
 	func(_p):
-		var ee := preload("res://emoji_explosion.tscn").instantiate()
-		ee.emoji = ";)"
-		ee.position = Vector2(384, 512/2)
-		add_child(ee)
+		explode(":)")
 )
 
 func _ready() -> void:

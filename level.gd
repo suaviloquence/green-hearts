@@ -9,6 +9,16 @@ var player: Player
 
 var SCARY_GUY := preload("res://icon.svg")
 
+func explode(emoji, pos: Vector2 = Vector2(384, 128)):
+	var ee := preload("res://emoji_explosion.tscn").instantiate()
+	ee.emoji = emoji
+	ee.position = pos
+	add_child(ee)
+
+func add_heart(player: Player, amt: int = 1):
+	player.hearts += amt
+	explode("💚")
+
 func _ready():
 	render_tree(tree)
 

@@ -26,7 +26,7 @@ var EVIL_LINGUINE := Item.new("Linguine", "Kwaft Boxed Linguine",
 var FARMED_SHRIMP := Item.new("Shrimp", "Eyre Farmed Shrimp",
 	"Factory-farmed shrimp available in stores nationwide.", 7, -3)
 var MUSHROOMS := Item.new("Shrimp", "King Oyster Mushrooms",
-	"You read that this can be used as a substitute for shrimp.  Jury is still out on if it tastes the same...", 8, 4, -2)
+	"You read that this can be used as a substitute for shrimp.  Jury is still out on if it tastes the same...", 8, 4, -1)
 var WILD_PRAWNS := Item.new("Shrimp", "Wild-caught Prawns",
 	"Small-batch wild-caught domestic prawns.  Pricey, but many people swear by it.", 16, 4, 1)
 
@@ -95,7 +95,7 @@ var LOCAL_WINE := Item.new("White Wine", "Local Vineyard Wine",
 
 var order := ["Linguine", "Shrimp", "Onion", "Parsley", "White Wine"]
 
-var money := 35
+var money := 40
 var cart := {
 	"Linguine": null,
 	"Shrimp": null,
