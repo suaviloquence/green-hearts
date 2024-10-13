@@ -1,0 +1,9 @@
+[gd_scene load_steps=3 format=3 uid="uid://baqg768cmx1pr"]
+
+[ext_resource type="PackedScene" path="res://level.tscn" id="1_ft3ak"]
+[ext_resource type="Script" path="res://agni_post_game.gd" id="2_5m5gn"]
+
+[node name="Agni Post Game" instance=ExtResource("1_ft3ak")]
+script = ExtResource("2_5m5gn")
+mistakes = 0
+time_left = 0

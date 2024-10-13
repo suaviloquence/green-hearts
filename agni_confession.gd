@@ -10,7 +10,7 @@ var ultimatum_1 = DialogNode.new("Agni: A deal-breaker? You’re really throwing
 var ultimatum = DialogNode.new("$name: If you can’t make that change, then I don’t think I can continue this relationship", ultimatum_1)
 
 var try_start_final = DialogNode.new("Agni: Look, I get it. I know I’m not exactly the model of restraint, but... for you, I’ll try. I don’t want to mess this up.", null, null, 
-	add_heart(player)
+	func(player): add_heart(player)
 )
 var try_start_3 = DialogNode.new("They’re quiet for a moment, staring back up at the stars, before sighing.", try_start_final)
 var try_start_2 = DialogNode.new("Agni: Changes, huh? You think I’m just burning through everything without a second thought?", try_start_3)
