@@ -1,0 +1,16 @@
+[gd_scene load_steps=4 format=3 uid="uid://c4wedxmvyqogp"]
+
+[ext_resource type="PackedScene" uid="uid://d080f10bt85i1" path="res://level.tscn" id="1_1mdlt"]
+[ext_resource type="Texture2D" uid="uid://dpbe2wenlooay" path="res://curtains.jpg" id="2_bnuq7"]
+[ext_resource type="Script" path="res://game_over.gd" id="2_yi1ck"]
+
+[node name="Level" instance=ExtResource("1_1mdlt")]
+script = ExtResource("2_yi1ck")
+
+[node name="TextureRect" type="TextureRect" parent="." index="0"]
+offset_top = -4.0
+offset_right = 768.0
+offset_bottom = 508.0
+texture = ExtResource("2_bnuq7")
+expand_mode = 1
+stretch_mode = 6
