@@ -1,0 +1,16 @@
+[gd_scene load_steps=4 format=3 uid="uid://corchoiqehevr"]
+
+[ext_resource type="PackedScene" uid="uid://d080f10bt85i1" path="res://level.tscn" id="1_y36w4"]
+[ext_resource type="Script" path="res://agni_picnic.gd" id="2_kfo6e"]
+[ext_resource type="Texture2D" uid="uid://fe03u1khdf43" path="res://TRASH_GRASS.png" id="3_c8hlg"]
+
+[node name="Level" instance=ExtResource("1_y36w4")]
+script = ExtResource("2_kfo6e")
+
+[node name="TextureRect" type="TextureRect" parent="." index="0"]
+offset_top = -4.0
+offset_right = 768.0
+offset_bottom = 508.0
+texture = ExtResource("3_c8hlg")
+expand_mode = 1
+stretch_mode = 6

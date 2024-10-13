@@ -1,19 +1,21 @@
-[gd_scene load_steps=13 format=3 uid="uid://dmji0qqnyepe1"]
+[gd_scene load_steps=15 format=3 uid="uid://dmji0qqnyepe1"]
 
 [ext_resource type="Script" path="res://sorting_game.gd" id="1_jlal8"]
-[ext_resource type="Texture2D" uid="uid://dnat0xj3japj8" path="res://icon.svg" id="1_ut0su"]
 [ext_resource type="Texture2D" uid="uid://fe03u1khdf43" path="res://TRASH_GRASS.png" id="2_u165f"]
 [ext_resource type="PackedScene" uid="uid://dlosdkxh0gulo" path="res://trash_thang.tscn" id="3_fgf41"]
+[ext_resource type="Texture2D" uid="uid://coemuwhma3swb" path="res://trash/trash.png" id="3_qtdry"]
+[ext_resource type="Texture2D" uid="uid://5dn2lbx1xvb2" path="res://trash/recyc.png" id="4_qvb0t"]
 [ext_resource type="Texture2D" uid="uid://dadmubkmwjgvr" path="res://trash/forkce.png" id="4_yjqfe"]
 [ext_resource type="Texture2D" uid="uid://cwf8ifhagmt8c" path="res://button.png" id="5_8od6x"]
 [ext_resource type="Texture2D" uid="uid://5xsehct50q7s" path="res://trash/used takeout.png" id="5_dvrbl"]
+[ext_resource type="Texture2D" uid="uid://dliogwo26yxb6" path="res://trash/comp.png" id="5_wvxpb"]
 [ext_resource type="Texture2D" uid="uid://be6nkuh4ffcwl" path="res://trash/jar.png" id="6_4db3h"]
 [ext_resource type="Texture2D" uid="uid://pi40brtca2ne" path="res://trash/water.png" id="7_mws8c"]
 [ext_resource type="Texture2D" uid="uid://taakw850c0jo" path="res://trash/wine.png" id="8_m6yyk"]
 [ext_resource type="Texture2D" uid="uid://nm6c5rsc7y44" path="res://trash/chips.png" id="9_lk367"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_p4744"]
-size = Vector2(128, 192)
+size = Vector2(128, 160)
 
 [node name="SortingGame" type="Node2D"]
 script = ExtResource("1_jlal8")
@@ -30,8 +32,7 @@ collision_mask = 2
 input_pickable = false
 
 [node name="Sprite2D" type="Sprite2D" parent="Trash"]
-scale = Vector2(1, 1.5)
-texture = ExtResource("1_ut0su")
+texture = ExtResource("3_qtdry")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Trash"]
 shape = SubResource("RectangleShape2D_p4744")
@@ -42,8 +43,7 @@ collision_mask = 2
 input_pickable = false
 
 [node name="Sprite2D" type="Sprite2D" parent="Recycling"]
-scale = Vector2(1, 1.5)
-texture = ExtResource("1_ut0su")
+texture = ExtResource("4_qvb0t")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Recycling"]
 shape = SubResource("RectangleShape2D_p4744")
@@ -54,8 +54,7 @@ collision_mask = 2
 input_pickable = false
 
 [node name="Sprite2D" type="Sprite2D" parent="Compost"]
-scale = Vector2(1, 1.5)
-texture = ExtResource("1_ut0su")
+texture = ExtResource("5_wvxpb")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Compost"]
 shape = SubResource("RectangleShape2D_p4744")
