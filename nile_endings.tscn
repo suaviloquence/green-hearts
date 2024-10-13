@@ -1,6 +1,6 @@
-[gd_scene load_steps=3 format=3 uid="uid://bvp0n6xvo5pcd"]
+[gd_scene load_steps=3 format=3 uid="uid://qc6aeo4y2k55"]
 
-[ext_resource type="PackedScene" path="res://level.tscn" id="1_onftt"]
+[ext_resource type="PackedScene" uid="uid://d080f10bt85i1" path="res://level.tscn" id="1_onftt"]
 [ext_resource type="Script" path="res://nile_endings.gd" id="2_byf5h"]
 
 [node name="Nile Endings" instance=ExtResource("1_onftt")]

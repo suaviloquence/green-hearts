@@ -17,7 +17,7 @@ offset_left = -32.0
 offset_top = -32.0
 offset_right = 32.0
 offset_bottom = 32.0
-expand_mode = 5
+expand_mode = 1
 stretch_mode = 5
 
 [connection signal="input_event" from="." to="." method="_on_input_event"]

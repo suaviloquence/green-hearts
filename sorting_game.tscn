@@ -1,10 +1,15 @@
-[gd_scene load_steps=7 format=3 uid="uid://dmji0qqnyepe1"]
+[gd_scene load_steps=12 format=3 uid="uid://dmji0qqnyepe1"]
 
 [ext_resource type="Script" path="res://sorting_game.gd" id="1_jlal8"]
 [ext_resource type="Texture2D" uid="uid://dnat0xj3japj8" path="res://icon.svg" id="1_ut0su"]
 [ext_resource type="PackedScene" uid="uid://dlosdkxh0gulo" path="res://trash_thang.tscn" id="3_fgf41"]
 [ext_resource type="Texture2D" uid="uid://dadmubkmwjgvr" path="res://trash/forkce.png" id="4_yjqfe"]
 [ext_resource type="Texture2D" uid="uid://cwf8ifhagmt8c" path="res://button.png" id="5_8od6x"]
+[ext_resource type="Texture2D" uid="uid://5xsehct50q7s" path="res://trash/used takeout.png" id="5_dvrbl"]
+[ext_resource type="Texture2D" uid="uid://be6nkuh4ffcwl" path="res://trash/jar.png" id="6_4db3h"]
+[ext_resource type="Texture2D" uid="uid://pi40brtca2ne" path="res://trash/water.png" id="7_mws8c"]
+[ext_resource type="Texture2D" uid="uid://taakw850c0jo" path="res://trash/wine.png" id="8_m6yyk"]
+[ext_resource type="Texture2D" uid="uid://nm6c5rsc7y44" path="res://trash/chips.png" id="9_lk367"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_p4744"]
 size = Vector2(128, 192)
@@ -52,6 +57,24 @@ shape = SubResource("RectangleShape2D_p4744")
 kind = 2
 texture = ExtResource("4_yjqfe")
 
+[node name="TrashThang2" parent="." instance=ExtResource("3_fgf41")]
+kind = 2
+texture = ExtResource("5_dvrbl")
+
+[node name="TrashThang3" parent="." instance=ExtResource("3_fgf41")]
+kind = 1
+texture = ExtResource("6_4db3h")
+
+[node name="TrashThang4" parent="." instance=ExtResource("3_fgf41")]
+kind = 1
+texture = ExtResource("7_mws8c")
+
+[node name="TrashThang5" parent="." instance=ExtResource("3_fgf41")]
+texture = ExtResource("8_m6yyk")
+
+[node name="TrashThang6" parent="." instance=ExtResource("3_fgf41")]
+texture = ExtResource("9_lk367")
+
 [node name="TextureRect" type="TextureRect" parent="."]
 offset_left = 32.0
 offset_right = 96.0
@@ -69,3 +92,69 @@ grow_vertical = 2
 text = "30 secs"
 horizontal_alignment = 1
 vertical_alignment = 1
+
+[node name="TrashThang7" parent="." instance=ExtResource("3_fgf41")]
+kind = 2
+texture = ExtResource("4_yjqfe")
+
+[node name="TrashThang8" parent="." instance=ExtResource("3_fgf41")]
+kind = 2
+texture = ExtResource("5_dvrbl")
+
+[node name="TrashThang9" parent="." instance=ExtResource("3_fgf41")]
+kind = 1
+texture = ExtResource("6_4db3h")
+
+[node name="TrashThang10" parent="." instance=ExtResource("3_fgf41")]
+kind = 1
+texture = ExtResource("7_mws8c")
+
+[node name="TrashThang11" parent="." instance=ExtResource("3_fgf41")]
+texture = ExtResource("8_m6yyk")
+
+[node name="TrashThang12" parent="." instance=ExtResource("3_fgf41")]
+texture = ExtResource("9_lk367")
+
+[node name="TrashThang13" parent="." instance=ExtResource("3_fgf41")]
+kind = 2
+texture = ExtResource("4_yjqfe")
+
+[node name="TrashThang14" parent="." instance=ExtResource("3_fgf41")]
+kind = 2
+texture = ExtResource("5_dvrbl")
+
+[node name="TrashThang15" parent="." instance=ExtResource("3_fgf41")]
+kind = 1
+texture = ExtResource("6_4db3h")
+
+[node name="TrashThang16" parent="." instance=ExtResource("3_fgf41")]
+kind = 1
+texture = ExtResource("7_mws8c")
+
+[node name="TrashThang17" parent="." instance=ExtResource("3_fgf41")]
+texture = ExtResource("8_m6yyk")
+
+[node name="TrashThang18" parent="." instance=ExtResource("3_fgf41")]
+texture = ExtResource("9_lk367")
+
+[node name="TrashThang19" parent="." instance=ExtResource("3_fgf41")]
+kind = 2
+texture = ExtResource("4_yjqfe")
+
+[node name="TrashThang20" parent="." instance=ExtResource("3_fgf41")]
+kind = 2
+texture = ExtResource("5_dvrbl")
+
+[node name="TrashThang21" parent="." instance=ExtResource("3_fgf41")]
+kind = 1
+texture = ExtResource("6_4db3h")
+
+[node name="TrashThang22" parent="." instance=ExtResource("3_fgf41")]
+kind = 1
+texture = ExtResource("7_mws8c")
+
+[node name="TrashThang23" parent="." instance=ExtResource("3_fgf41")]
+texture = ExtResource("8_m6yyk")
+
+[node name="TrashThang24" parent="." instance=ExtResource("3_fgf41")]
+texture = ExtResource("9_lk367")

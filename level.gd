@@ -10,6 +10,7 @@ var player: Player
 var SCARY_GUY := preload("res://icon.svg")
 var NILE := preload("res://NILE.png")
 var AGNI := preload("res://AGNI.png")
+var RHEA := preload("res://RHEA.png")
 var RESET := Texture.new()
 
 func explode(emoji, pos: Vector2 = Vector2(384, 128)):
