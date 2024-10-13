@@ -1,9 +1,18 @@
-[gd_scene load_steps=3 format=3 uid="uid://baqg768cmx1pr"]
+[gd_scene load_steps=4 format=3 uid="uid://b74hu0f5fctx3"]
 
-[ext_resource type="PackedScene" path="res://level.tscn" id="1_ft3ak"]
+[ext_resource type="PackedScene" uid="uid://d080f10bt85i1" path="res://level.tscn" id="1_ft3ak"]
 [ext_resource type="Script" path="res://agni_post_game.gd" id="2_5m5gn"]
+[ext_resource type="Texture2D" uid="uid://fe03u1khdf43" path="res://TRASH_GRASS.png" id="3_q7ikc"]
 
 [node name="Agni Post Game" instance=ExtResource("1_ft3ak")]
 script = ExtResource("2_5m5gn")
 mistakes = 0
 time_left = 0
+
+[node name="TextureRect" type="TextureRect" parent="." index="0"]
+offset_top = -4.0
+offset_right = 768.0
+offset_bottom = 508.0
+texture = ExtResource("3_q7ikc")
+expand_mode = 1
+stretch_mode = 6

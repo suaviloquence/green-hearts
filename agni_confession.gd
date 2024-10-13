@@ -26,7 +26,7 @@ var confession_6 = DialogNode.new("A meteor shoots across the sky. It’s the pe
 var confession_5 = DialogNode.new("Agni: I’m glad I gave you a chance too, but you look a little tense. What’s bouncing around in that head of yours?", confession_6)
 var confession_4 = DialogNode.new("Agni takes their gaze away from the stars to look at you. They can tell you want to talk about something serious.", confession_5)
 var confession_3 = DialogNode.new("$name: Agni, I’m really glad you gave me a chance after the trail.", confession_4)
-var confession_2 = DialogNode.new("Agni is sitting close to you, your shoulders’ touching as you both cuddle under a blanket. Every now and then, Agni will point at a cluster of stars and try to come up with a story for them. Every laugh they bring out of you only reminds you of how difficult your confession will be.", confession_3)
+var confession_2 = DialogNode.new("Agni is sitting close to you, your shoulders’ touching as you both cuddle under a blanket. Every now and then, Agni will point at a cluster of stars and try to come up with a story for them. Every laugh they bring out of you only reminds you of how difficult your confession will be.", confession_3, AGNI)
 var confession_1 = DialogNode.new("You have invited Agni on a stargazing date in a forest to watch a meteor shower! Remember, tread carefully, if they don’t choose to live sustainably after this confession, it may be impossible to ever control the fire damage they can cause.", confession_2)
 var confession_start = DialogNode.new("It has been a couple of dates since the picnic date and the both of you have gotten a lot closer. It’s enough for you to feel like it’s time to confess to Agni, and see if they’re willing to be sustainable with you.", confession_1)
 

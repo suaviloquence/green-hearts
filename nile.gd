@@ -35,3 +35,5 @@ func _ready() -> void:
 	ending.player = player
 	add_child(ending)
 	await ending.done
+	
+	done.emit()
