@@ -1,0 +1,7 @@
+[gd_scene load_steps=3 format=3 uid="uid://cggpbatydkrvb"]
+
+[ext_resource type="PackedScene" path="res://level.tscn" id="1_d7lhw"]
+[ext_resource type="Script" path="res://nile_confession.gd" id="2_f5r1u"]
+
+[node name="Nile Confession" instance=ExtResource("1_d7lhw")]
+script = ExtResource("2_f5r1u")
