@@ -15,11 +15,11 @@ var y_n_prompt_descriptions = DialogNode.new("If Intel really has evidence to sh
 var hq_disaster_reasoning = DialogNode.new("Not control per se: they are seemingly unaware of their condition. It’s more accurate to say that their moods are inexplicably linked to the pattern of appearances of natural disasters.",
 			DialogNode.new("Here’s where we need you.  We’ve determined that the best way forward is to give them a little help controlling their moods.  We need you to enter a romantic relationship with one of these three, and help them build a better connection with the environment. This is a very delicate mission, as when they get mad…", DialogNode.new("Let’s just say the city can’t handle any more natural disasters.", y_n_prompt_descriptions)))
 var y_n_brief_response = DialogNode.new("Hold on. Are you saying that these three people have the power to control natural disasters?", hq_disaster_reasoning, null)
-var hq_briefing = DialogNode.new("No worries $name.  We have identified three individuals in this city who have drawn our attention. We have reason to believe that these individuals’ behavior correlates with the anomalous pattern of natural disasters we’ve been experiencing recently.  It may seem hard to believe, but our investigators have surveilled these three extensively, and without fail, their behavior and mood has led to these disasters occurring rapidly and spontaneously.”", y_n_brief_response, preload("res://down.png"))
+var hq_briefing = DialogNode.new("No worries $name.  We have identified three individuals in this city who have drawn our attention. We have reason to believe that these individuals’ behavior correlates with the anomalous pattern of natural disasters we’ve been experiencing recently.  It may seem hard to believe, but our investigators have surveilled these three extensively, and without fail, their behavior and mood has led to these disasters occurring rapidly and spontaneously.”", y_n_brief_response)
 var y_n_prompt_brief = DialogNode.new("Not yet sir, I just got here. Could you give me the details?", hq_briefing, null)
 
 
 func _ready():
-	tree = DialogNode.new("Agent $name, right on time! I assume you’ve been briefed on your mission?", y_n_prompt_brief, preload("res://icon.svg"))
+	tree = DialogNode.new("Agent $name, right on time! I assume you’ve been briefed on your mission?", y_n_prompt_brief)
 	#tree = hq_rhea_description
 	super._ready()

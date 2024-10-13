@@ -4,7 +4,7 @@ func start_with(player: Player) -> void:
 	var Level := preload("res://level.tscn")
 	var intro := Level.instantiate()
 	intro.player = player
-	intro.tree = DialogNode.new("Welcome.  Please enter your name: ", Terminus.new(), intro.SCARY_GUY);
+	intro.tree = DialogNode.new("Welcome.  Please enter your name: ", Terminus.new());
 	add_child(intro)
 	await intro.done
 	
@@ -15,7 +15,7 @@ func start_with(player: Player) -> void:
 		box_abuse.tree = DialogNode.new("", Terminus.new())
 		box_abuse.player = player
 		add_child(box_abuse)
-		move_child(box_abuse, 0)
+		move_child(box_abuse, 1)
 		await box_abuse.done
 		
 		if not $Name.text: continue
@@ -30,7 +30,6 @@ func start_with(player: Player) -> void:
 		confirm.player = player
 		add_child(confirm)
 		await confirm.done
-		print(player.player_name)
 	
 	var prns = Level.instantiate()
 	prns.player = player

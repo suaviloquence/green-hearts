@@ -1,6 +1,6 @@
-[gd_scene load_steps=3 format=3 uid="uid://dqun8m7a2o1cc"]
+[gd_scene load_steps=3 format=3 uid="uid://dova0vc4qo55o"]
 
-[ext_resource type="PackedScene" path="res://level.tscn" id="1_iwd2m"]
+[ext_resource type="PackedScene" uid="uid://d080f10bt85i1" path="res://level.tscn" id="1_iwd2m"]
 [ext_resource type="Script" path="res://nile_interlude_togame.gd" id="2_66v26"]
 
 [node name="Nile Interlude to Game" instance=ExtResource("1_iwd2m")]

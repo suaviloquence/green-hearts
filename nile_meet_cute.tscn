@@ -1,7 +1,14 @@
-[gd_scene load_steps=3 format=3 uid="uid://clbchfxrdaj0x"]
+[gd_scene load_steps=4 format=3 uid="uid://clbchfxrdaj0x"]
 
 [ext_resource type="PackedScene" uid="uid://d080f10bt85i1" path="res://level.tscn" id="1_t84ws"]
 [ext_resource type="Script" path="res://nile_meet_cute.gd" id="2_0fda7"]
+[ext_resource type="Texture2D" uid="uid://b8cc6k32ephjs" path="res://pool.jpg" id="3_frb2u"]
 
 [node name="Nile Meet-cute" instance=ExtResource("1_t84ws")]
 script = ExtResource("2_0fda7")
+
+[node name="TextureRect" type="TextureRect" parent="." index="0"]
+offset_right = 768.0
+offset_bottom = 512.0
+texture = ExtResource("3_frb2u")
+expand_mode = 1

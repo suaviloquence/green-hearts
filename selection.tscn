@@ -2,9 +2,15 @@
 
 [ext_resource type="PackedScene" uid="uid://d080f10bt85i1" path="res://level.tscn" id="1_uf0i1"]
 [ext_resource type="Script" path="res://selection.gd" id="2_uxu0p"]
-[ext_resource type="PackedScene" uid="uid://b7qkjxest14rw" path="res://Player.tscn" id="3_umewr"]
+[ext_resource type="Texture2D" uid="uid://b4nvbta1y0uv5" path="res://moniteur.png" id="3_xldkw"]
 
 [node name="Selection" instance=ExtResource("1_uf0i1")]
 script = ExtResource("2_uxu0p")
 
-[node name="Player" parent="." index="0" instance=ExtResource("3_umewr")]
+[node name="TextureRect" type="TextureRect" parent="." index="0"]
+offset_top = -4.0
+offset_right = 768.0
+offset_bottom = 508.0
+texture = ExtResource("3_xldkw")
+expand_mode = 1
+stretch_mode = 6

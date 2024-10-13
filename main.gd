@@ -5,8 +5,8 @@ extends Node2D
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
-	#await $PlayerInfo.start_with(player)
-	player.player_name = "PLAYEr"
+	await $PlayerInfo.start_with(player)
+	$PlayerInfo.queue_free()
 	
 	var selection = preload("res://selection.tscn").instantiate()
 	selection.player = player
