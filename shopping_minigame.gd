@@ -111,7 +111,7 @@ var time := 45.
 
 
 func _ready():
-	$VBoxContainer/HBoxContainer/Time.text = "%d secs" % [ceili(time)];
+	$VBoxContainer/TextureRect/HBoxContainer/Time.text = "%d secs" % [ceili(time)];
 	redraw()
 
 func stop():
@@ -132,10 +132,10 @@ func _process(delta: float) -> void:
 	if time <= 0:
 		stop()
 	elif ceili(time + delta) != ceili(time):
-		$VBoxContainer/HBoxContainer/Time.text = "%d secs" % [ceili(time)];
+		$VBoxContainer/TextureRect/HBoxContainer/Time.text = "%d secs" % [ceili(time)];
 
 func redraw():
-	$VBoxContainer/HBoxContainer/Money.text = "$%d" % [money] 
+	$VBoxContainer/TextureRect/HBoxContainer/Money.text = "$%d" % [money] 
 	
 	if cart.values().all(func(x): return x != null):
 		$Finish.show()

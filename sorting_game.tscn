@@ -1,7 +1,8 @@
-[gd_scene load_steps=12 format=3 uid="uid://dmji0qqnyepe1"]
+[gd_scene load_steps=13 format=3 uid="uid://dmji0qqnyepe1"]
 
 [ext_resource type="Script" path="res://sorting_game.gd" id="1_jlal8"]
 [ext_resource type="Texture2D" uid="uid://dnat0xj3japj8" path="res://icon.svg" id="1_ut0su"]
+[ext_resource type="Texture2D" uid="uid://fe03u1khdf43" path="res://TRASH_GRASS.png" id="2_u165f"]
 [ext_resource type="PackedScene" uid="uid://dlosdkxh0gulo" path="res://trash_thang.tscn" id="3_fgf41"]
 [ext_resource type="Texture2D" uid="uid://dadmubkmwjgvr" path="res://trash/forkce.png" id="4_yjqfe"]
 [ext_resource type="Texture2D" uid="uid://cwf8ifhagmt8c" path="res://button.png" id="5_8od6x"]
@@ -16,6 +17,12 @@ size = Vector2(128, 192)
 
 [node name="SortingGame" type="Node2D"]
 script = ExtResource("1_jlal8")
+
+[node name="TextureRect2" type="TextureRect" parent="."]
+offset_right = 768.0
+offset_bottom = 512.0
+texture = ExtResource("2_u165f")
+expand_mode = 1
 
 [node name="Trash" type="Area2D" parent="."]
 position = Vector2(128, 128)
