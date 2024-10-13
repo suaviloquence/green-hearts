@@ -1,7 +1,6 @@
-[gd_scene load_steps=23 format=3 uid="uid://c5hr6qo0pxro1"]
+[gd_scene load_steps=24 format=3 uid="uid://c5hr6qo0pxro1"]
 
 [ext_resource type="Script" path="res://shopping_minigame.gd" id="1_37vvi"]
-[ext_resource type="Texture2D" uid="uid://c76xv3x37dedt" path="res://box.png" id="1_cldpa"]
 [ext_resource type="Texture2D" uid="uid://bhr2fa02112v6" path="res://GROCERY.png" id="2_f4lvi"]
 [ext_resource type="Texture2D" uid="uid://desxbtcggx6eb" path="res://paper.png" id="3_kwki4"]
 [ext_resource type="Texture2D" uid="uid://t34ssocwril1" path="res://store/linguine nest.png" id="4_1af4t"]
@@ -19,7 +18,9 @@
 [ext_resource type="Texture2D" uid="uid://cpt381tu1y1i5" path="res://store/bag parsley.png" id="12_j43a1"]
 [ext_resource type="Texture2D" uid="uid://u3bo5rmg3k10" path="res://store/dry parsley.png" id="13_k57aj"]
 [ext_resource type="Texture2D" uid="uid://csuwe0tumvlh8" path="res://store/bunch parsley.png" id="14_m17sp"]
+[ext_resource type="Texture2D" uid="uid://00r1ii18yd6x" path="res://INFO.png" id="19_abgt5"]
 [ext_resource type="Texture2D" uid="uid://5fargpbp4eic" path="res://finish.png" id="19_tchgf"]
+[ext_resource type="Texture2D" uid="uid://dep58e85i8b5d" path="res://EXIT.png" id="20_q6ptj"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_skkqj"]
 size = Vector2(64, 128)
@@ -313,10 +314,10 @@ texture = ExtResource("9_q4n1a")
 
 [node name="Info" type="TextureRect" parent="."]
 offset_left = 328.0
-offset_top = 128.0
+offset_top = 129.0
 offset_right = 696.0
-offset_bottom = 448.0
-texture = ExtResource("19_tchgf")
+offset_bottom = 449.0
+texture = ExtResource("19_abgt5")
 expand_mode = 1
 
 [node name="MarginContainer" type="MarginContainer" parent="Info"]
@@ -351,20 +352,9 @@ offset_bottom = -40.0
 grow_horizontal = 0
 grow_vertical = 0
 scale = Vector2(1.22839, 1.2677)
-texture_normal = ExtResource("1_cldpa")
+texture_normal = ExtResource("20_q6ptj")
 ignore_texture_size = true
 stretch_mode = 0
-
-[node name="Label" type="Label" parent="Info/Cancel"]
-layout_mode = 1
-anchors_preset = 15
-anchor_right = 1.0
-anchor_bottom = 1.0
-grow_horizontal = 2
-grow_vertical = 2
-text = "x"
-horizontal_alignment = 1
-vertical_alignment = 1
 
 [node name="Finish" type="TextureButton" parent="."]
 offset_left = 656.0

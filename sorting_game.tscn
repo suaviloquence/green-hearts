@@ -6,13 +6,13 @@
 [ext_resource type="Texture2D" uid="uid://coemuwhma3swb" path="res://trash/trash.png" id="3_qtdry"]
 [ext_resource type="Texture2D" uid="uid://5dn2lbx1xvb2" path="res://trash/recyc.png" id="4_qvb0t"]
 [ext_resource type="Texture2D" uid="uid://dadmubkmwjgvr" path="res://trash/forkce.png" id="4_yjqfe"]
-[ext_resource type="Texture2D" uid="uid://cwf8ifhagmt8c" path="res://button.png" id="5_8od6x"]
 [ext_resource type="Texture2D" uid="uid://5xsehct50q7s" path="res://trash/used takeout.png" id="5_dvrbl"]
 [ext_resource type="Texture2D" uid="uid://dliogwo26yxb6" path="res://trash/comp.png" id="5_wvxpb"]
 [ext_resource type="Texture2D" uid="uid://be6nkuh4ffcwl" path="res://trash/jar.png" id="6_4db3h"]
 [ext_resource type="Texture2D" uid="uid://pi40brtca2ne" path="res://trash/water.png" id="7_mws8c"]
 [ext_resource type="Texture2D" uid="uid://taakw850c0jo" path="res://trash/wine.png" id="8_m6yyk"]
 [ext_resource type="Texture2D" uid="uid://nm6c5rsc7y44" path="res://trash/chips.png" id="9_lk367"]
+[ext_resource type="Texture2D" uid="uid://5fargpbp4eic" path="res://finish.png" id="13_gkr5i"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_p4744"]
 size = Vector2(128, 160)
@@ -86,7 +86,7 @@ texture = ExtResource("9_lk367")
 offset_left = 32.0
 offset_right = 96.0
 offset_bottom = 32.0
-texture = ExtResource("5_8od6x")
+texture = ExtResource("13_gkr5i")
 expand_mode = 1
 
 [node name="Label" type="Label" parent="TextureRect"]
@@ -96,6 +96,7 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
+theme_override_colors/font_color = Color(0, 0, 0, 1)
 text = "30 secs"
 horizontal_alignment = 1
 vertical_alignment = 1
