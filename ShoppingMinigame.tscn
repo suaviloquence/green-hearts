@@ -1,9 +1,23 @@
-[gd_scene load_steps=7 format=3 uid="uid://c5hr6qo0pxro1"]
+[gd_scene load_steps=21 format=3 uid="uid://c5hr6qo0pxro1"]
 
 [ext_resource type="Script" path="res://shopping_minigame.gd" id="1_37vvi"]
 [ext_resource type="Texture2D" uid="uid://c76xv3x37dedt" path="res://box.png" id="1_cldpa"]
-[ext_resource type="Texture2D" uid="uid://dnat0xj3japj8" path="res://icon.svg" id="2_ajno3"]
+[ext_resource type="Texture2D" uid="uid://oqjgjqomqrtj" path="res://down.png" id="3_6sf34"]
 [ext_resource type="Texture2D" uid="uid://cwf8ifhagmt8c" path="res://button.png" id="4_0ic51"]
+[ext_resource type="Texture2D" uid="uid://t34ssocwril1" path="res://store/linguine nest.png" id="4_1af4t"]
+[ext_resource type="Texture2D" uid="uid://c0k1uvvwk5b0v" path="res://store/bag onion.png" id="4_tmyxy"]
+[ext_resource type="Texture2D" uid="uid://txufc0p5uj27" path="res://store/box linguine.png" id="5_fudo4"]
+[ext_resource type="Texture2D" uid="uid://dyg1uflkhvxa1" path="res://store/loose onion.png" id="5_qqltr"]
+[ext_resource type="Texture2D" uid="uid://bdoc3gg5qlf2w" path="res://store/fancy onion.png" id="6_aj531"]
+[ext_resource type="Texture2D" uid="uid://c7fqpvj446i16" path="res://store/shrimp pkg.png" id="6_dga4d"]
+[ext_resource type="Texture2D" uid="uid://brwgr4k8jym54" path="res://store/box wine.png" id="7_1ewes"]
+[ext_resource type="Texture2D" uid="uid://s5j32mfx8tcy" path="res://store/ko mush.png" id="7_gku4i"]
+[ext_resource type="Texture2D" uid="uid://ds1m1faj4twmp" path="res://store/normal wine.png" id="8_idli5"]
+[ext_resource type="Texture2D" uid="uid://comcpo157qllf" path="res://store/good shrimp.png" id="8_vckd7"]
+[ext_resource type="Texture2D" uid="uid://h8wdtcjlqj4p" path="res://store/local wine.png" id="9_q4n1a"]
+[ext_resource type="Texture2D" uid="uid://cpt381tu1y1i5" path="res://store/bag parsley.png" id="12_j43a1"]
+[ext_resource type="Texture2D" uid="uid://u3bo5rmg3k10" path="res://store/dry parsley.png" id="13_k57aj"]
+[ext_resource type="Texture2D" uid="uid://csuwe0tumvlh8" path="res://store/bunch parsley.png" id="14_m17sp"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_skkqj"]
 size = Vector2(64, 128)
@@ -89,11 +103,13 @@ position = Vector2(288, 255)
 shape = SubResource("RectangleShape2D_skkqj")
 
 [node name="TextureRect" type="TextureRect" parent="Left"]
-offset_left = -32.0
+offset_left = 72.0
 offset_top = -64.0
-offset_right = 32.0
+offset_right = 200.0
 offset_bottom = 64.0
-texture = ExtResource("2_ajno3")
+rotation = 1.5708
+scale = Vector2(1.00267, 1.00855)
+texture = ExtResource("3_6sf34")
 expand_mode = 1
 
 [node name="Right" type="Area2D" parent="."]
@@ -102,27 +118,32 @@ position = Vector2(736, 255)
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Right"]
 shape = SubResource("RectangleShape2D_skkqj")
 
-[node name="TextureRect" type="TextureRect" parent="Right"]
-offset_left = -32.0
+[node name="TextureRect2" type="TextureRect" parent="Right"]
+offset_left = 56.0
 offset_top = -64.0
-offset_right = 32.0
+offset_right = 184.0
 offset_bottom = 64.0
-texture = ExtResource("2_ajno3")
+rotation = 1.5708
+scale = Vector2(1.00267, 1.00855)
+texture = ExtResource("3_6sf34")
 expand_mode = 1
+flip_v = true
 
 [node name="Linguine" type="Node2D" parent="."]
+visible = false
 position = Vector2(0, -32)
 scale = Vector2(1.00081, 1)
 
 [node name="Fresh" type="Area2D" parent="Linguine"]
 position = Vector2(368, 128)
+scale = Vector2(0.966752, 1)
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Linguine/Fresh"]
 shape = SubResource("RectangleShape2D_hlfxx")
 
 [node name="Sprite2D" type="Sprite2D" parent="Linguine/Fresh"]
-scale = Vector2(0.5, 0.5)
-texture = ExtResource("2_ajno3")
+scale = Vector2(0.188, 0.188)
+texture = ExtResource("4_1af4t")
 
 [node name="Evil" type="Area2D" parent="Linguine"]
 position = Vector2(464, 128)
@@ -130,12 +151,11 @@ position = Vector2(464, 128)
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Linguine/Evil"]
 shape = SubResource("RectangleShape2D_hlfxx")
 
-[node name="Sprite2D" type="Sprite2D" parent="Linguine/Evil"]
-scale = Vector2(0.5, 0.5)
-texture = ExtResource("2_ajno3")
+[node name="Sprite2D2" type="Sprite2D" parent="Linguine/Evil"]
+scale = Vector2(0.125, 0.125)
+texture = ExtResource("5_fudo4")
 
 [node name="Shrimp" type="Node2D" parent="."]
-visible = false
 position = Vector2(0, -32)
 
 [node name="Farmed" type="Area2D" parent="Shrimp"]
@@ -145,8 +165,8 @@ position = Vector2(368, 128)
 shape = SubResource("RectangleShape2D_hlfxx")
 
 [node name="Sprite2D" type="Sprite2D" parent="Shrimp/Farmed"]
-scale = Vector2(0.5, 0.5)
-texture = ExtResource("2_ajno3")
+scale = Vector2(0.188, 0.188)
+texture = ExtResource("6_dga4d")
 
 [node name="Mushroom" type="Area2D" parent="Shrimp"]
 position = Vector2(464, 128)
@@ -155,8 +175,8 @@ position = Vector2(464, 128)
 shape = SubResource("RectangleShape2D_hlfxx")
 
 [node name="Sprite2D" type="Sprite2D" parent="Shrimp/Mushroom"]
-scale = Vector2(0.5, 0.5)
-texture = ExtResource("2_ajno3")
+scale = Vector2(0.094, 0.094)
+texture = ExtResource("7_gku4i")
 
 [node name="Wild" type="Area2D" parent="Shrimp"]
 position = Vector2(560, 128)
@@ -166,8 +186,8 @@ scale = Vector2(0.983281, 1)
 shape = SubResource("RectangleShape2D_hlfxx")
 
 [node name="Sprite2D" type="Sprite2D" parent="Shrimp/Wild"]
-scale = Vector2(0.5, 0.5)
-texture = ExtResource("2_ajno3")
+scale = Vector2(0.094, 0.093868)
+texture = ExtResource("8_vckd7")
 
 [node name="Onion" type="Node2D" parent="."]
 visible = false
@@ -180,8 +200,8 @@ position = Vector2(368, 128)
 shape = SubResource("RectangleShape2D_hlfxx")
 
 [node name="Sprite2D" type="Sprite2D" parent="Onion/Bagged"]
-scale = Vector2(0.5, 0.5)
-texture = ExtResource("2_ajno3")
+scale = Vector2(0.25, 0.25)
+texture = ExtResource("4_tmyxy")
 
 [node name="Loose" type="Area2D" parent="Onion"]
 position = Vector2(464, 128)
@@ -190,8 +210,9 @@ position = Vector2(464, 128)
 shape = SubResource("RectangleShape2D_hlfxx")
 
 [node name="Sprite2D" type="Sprite2D" parent="Onion/Loose"]
-scale = Vector2(0.5, 0.5)
-texture = ExtResource("2_ajno3")
+rotation = 1.5708
+scale = Vector2(0.113435, 0.124697)
+texture = ExtResource("5_qqltr")
 
 [node name="FarmFresh" type="Area2D" parent="Onion"]
 position = Vector2(560, 128)
@@ -201,8 +222,8 @@ scale = Vector2(0.983281, 1)
 shape = SubResource("RectangleShape2D_hlfxx")
 
 [node name="Sprite2D" type="Sprite2D" parent="Onion/FarmFresh"]
-scale = Vector2(0.5, 0.5)
-texture = ExtResource("2_ajno3")
+scale = Vector2(0.094, 0.094)
+texture = ExtResource("6_aj531")
 
 [node name="Parsley" type="Node2D" parent="."]
 visible = false
@@ -215,8 +236,8 @@ position = Vector2(368, 128)
 shape = SubResource("RectangleShape2D_hlfxx")
 
 [node name="Sprite2D" type="Sprite2D" parent="Parsley/Bagged"]
-scale = Vector2(0.5, 0.5)
-texture = ExtResource("2_ajno3")
+scale = Vector2(0.188, 0.188)
+texture = ExtResource("12_j43a1")
 
 [node name="Dried" type="Area2D" parent="Parsley"]
 position = Vector2(464, 128)
@@ -225,8 +246,8 @@ position = Vector2(464, 128)
 shape = SubResource("RectangleShape2D_hlfxx")
 
 [node name="Sprite2D" type="Sprite2D" parent="Parsley/Dried"]
-scale = Vector2(0.5, 0.5)
-texture = ExtResource("2_ajno3")
+scale = Vector2(0.125, 0.125)
+texture = ExtResource("13_k57aj")
 
 [node name="Fresh" type="Area2D" parent="Parsley"]
 position = Vector2(560, 128)
@@ -236,8 +257,8 @@ scale = Vector2(0.983281, 1)
 shape = SubResource("RectangleShape2D_hlfxx")
 
 [node name="Sprite2D" type="Sprite2D" parent="Parsley/Fresh"]
-scale = Vector2(0.5, 0.5)
-texture = ExtResource("2_ajno3")
+scale = Vector2(0.125, 0.125)
+texture = ExtResource("14_m17sp")
 
 [node name="WhiteWine" type="Node2D" parent="."]
 visible = false
@@ -250,8 +271,8 @@ position = Vector2(368, 128)
 shape = SubResource("RectangleShape2D_hlfxx")
 
 [node name="Sprite2D" type="Sprite2D" parent="WhiteWine/Boxed"]
-scale = Vector2(0.5, 0.5)
-texture = ExtResource("2_ajno3")
+scale = Vector2(0.187663, 0.18766)
+texture = ExtResource("7_1ewes")
 
 [node name="Normal" type="Area2D" parent="WhiteWine"]
 position = Vector2(464, 128)
@@ -260,8 +281,8 @@ position = Vector2(464, 128)
 shape = SubResource("RectangleShape2D_hlfxx")
 
 [node name="Sprite2D" type="Sprite2D" parent="WhiteWine/Normal"]
-scale = Vector2(0.5, 0.5)
-texture = ExtResource("2_ajno3")
+scale = Vector2(0.063, 0.063)
+texture = ExtResource("8_idli5")
 
 [node name="Local" type="Area2D" parent="WhiteWine"]
 position = Vector2(560, 128)
@@ -271,8 +292,8 @@ scale = Vector2(0.983281, 1.00187)
 shape = SubResource("RectangleShape2D_hlfxx")
 
 [node name="Sprite2D" type="Sprite2D" parent="WhiteWine/Local"]
-scale = Vector2(0.5, 0.5)
-texture = ExtResource("2_ajno3")
+scale = Vector2(0.094, 0.0938396)
+texture = ExtResource("9_q4n1a")
 
 [node name="Info" type="TextureRect" parent="."]
 visible = false
