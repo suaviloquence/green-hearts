@@ -20,7 +20,7 @@ func _ready() -> void:
 			add_child(agni)
 			await agni.done
 		Player.Mission.Nile:
-			var nile := preload("res://nile_meet_cute.tscn").instantiate()
+			var nile := preload("res://nile.tscn").instantiate()
 			nile.player = player
 			add_child(nile)
 			await nile.done

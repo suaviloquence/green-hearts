@@ -1,5 +1,8 @@
 extends Level
 
+@export var sustainability: int
+@export var taste: int
+
 var three_hearts_final = DialogNode.new("Score!!!", null)
 var three_hearts_3 = DialogNode.new("Nile: You know $name, I think you got me here. This is definitely worth going sustainable over. Thank you for inviting me over <3", three_hearts_final)
 var three_hearts_2 = DialogNode.new("You both take a bite, and wow, it actually tastes better than you thought it would.", three_hearts_3)
