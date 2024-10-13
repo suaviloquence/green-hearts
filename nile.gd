@@ -20,3 +20,13 @@ func _ready() -> void:
 	date.taste = taste
 	add_child(date)
 	await date.done
+	
+	var confession := preload("res://nile_confession.tscn").instantiate()
+	confession.player = player
+	add_child(confession)
+	await confession.done
+	
+	var ending := preload("res://nile_endings.tscn").instantiate()
+	ending.player = player
+	add_child(ending)
+	await ending.done

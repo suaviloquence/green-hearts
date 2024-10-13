@@ -29,7 +29,6 @@ var ending = false
 func _ready() -> void:
 	self.tree = confession_1
 	super._ready()
-	
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta: float) -> void:
